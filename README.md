@@ -665,6 +665,10 @@ plt.tight_layout()
 plt.show()
 ```   
 
+[View the full Python script here →](Python/Joukowski_transformation.py)  
+
+[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/Joukowski_transformation.py)  
+
 ![Joukowsky mapping_1](images/Joukowsky_mapping_1.png)  
 
 
