@@ -1018,11 +1018,11 @@ So, the derivation is clean, and this specific complex potential is perfectly de
 [Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta.py)  
 
 
-##### The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
+#### 2.4.3 Appendix - The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
 
 The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the cylinder surface at each angle.
 
-###### 1. The Shape of the Curve
+##### 1. The Shape of the Curve
 
 - **Without circulation ($\Gamma = 0$):** The curve is a pure sine wave.
   - $v_\theta = 0$ at the front ($\theta = 0$) and rear ($\theta = \pi$) → stagnation points.
@@ -1032,13 +1032,13 @@ The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the 
 
 - **With circulation ($\Gamma > 0$):** The entire sine wave is shifted upward by a constant $+\Gamma/(2\pi R)$.
 
-###### 2. What the Shift Does Physically
+##### 2. What the Shift Does Physically
 
 - **Breaks the symmetry**: The top and bottom speeds are no longer equal. One side becomes faster, the other slower.
 - **Moves the stagnation points**: The front and rear stagnation points shift away from $0$ and $\pi$. This tilts the flow pattern.
 - **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
 
-###### 3. Why It Generates Lift
+##### 3. Why It Generates Lift
 
 - Faster flow on one surface → **lower pressure** (Bernoulli's principle).
 - Slower flow on the opposite surface → **higher pressure**.
@@ -1050,6 +1050,6 @@ L = \rho_\infty U_\infty \Gamma
 $$
 
 
-###### 💡 Bottom Line
+##### 💡 Bottom Line
 
 > The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).
