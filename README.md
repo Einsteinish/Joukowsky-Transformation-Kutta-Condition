@@ -1012,3 +1012,7 @@ $$
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
 
 ![Joukowsky mapping_2](images/v_theta.png)  
+
+[View the full Python script here →](Python/v_theta.py)  
+
+[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta.py)  
