@@ -783,7 +783,7 @@ $$
 - $U_\infty$: freestream speed.
 - $\Gamma$: circulation (positive clockwise).
 
-
+Check 2.4.2 Appendix - How to get the Surface Velocity, $V_\theta(\theta)$ for the derivation of the formula.
 
 ##### B. Finding the Stagnation Points
 
@@ -864,7 +864,7 @@ $$
 **Key insight**: Even at zero geometric angle of attack ($\alpha = 0$), a cambered airfoil ($\beta > 0$) still produces a non‑zero circulation $\Gamma = 4\pi R U_\infty \sin\beta$, which generates positive lift.
 
 
-#### 2.4.2 Appendix - How to get the Surface Velocity on the Cylinder of 2.4.1.A 
+#### 2.4.2 Appendix - How to get the Surface Velocity, $V_\theta(\theta)$ (see 2.4.1.A) 
 
 ##### Derivation of Tangential Velocity on a Cylinder Surface
 
