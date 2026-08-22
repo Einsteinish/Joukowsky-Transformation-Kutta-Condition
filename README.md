@@ -783,7 +783,8 @@ $$
 - $U_\infty$: freestream speed.
 - $\Gamma$: circulation (positive clockwise).
 
-Check 2.4.2 Appendix - How to get the Surface Velocity, $V_\theta(\theta)$ for the derivation of the formula.
+Check Appendix 2.4.2: Derivation of the Surface Velocity $V_\theta(\theta)$.
+
 
 ##### B. Finding the Stagnation Points
 
