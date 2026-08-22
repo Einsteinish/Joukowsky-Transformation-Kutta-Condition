@@ -998,7 +998,7 @@ $$
 
  
 
-###### Physical Interpretation
+##### Physical Interpretation
 
 - The term $-2U_\infty \sin(\theta - \alpha)$ is the contribution from the freestream flow as it flows around the cylinder at angle of attack.
 - The term $+\dfrac{\Gamma}{2\pi R}$ is a constant shift in the tangential velocity caused by the circulation.
@@ -1016,3 +1016,40 @@ So, the derivation is clean, and this specific complex potential is perfectly de
 [View the full Python script here →](Python/v_theta.py)  
 
 [Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta.py)  
+
+
+##### The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
+
+The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the cylinder surface at each angle.
+
+###### 1. The Shape of the Curve
+
+- **Without circulation ($\Gamma = 0$):** The curve is a pure sine wave.
+  - $v_\theta = 0$ at the front ($\theta = 0$) and rear ($\theta = \pi$) → stagnation points.
+  - Maximum speed occurs at the top ($\theta = \pi/2$) and bottom ($\theta = 3\pi/2$).
+  - The flow is **symmetric**: top and bottom speeds are equal in magnitude.
+  - **Net force = Zero** (no lift).
+
+- **With circulation ($\Gamma > 0$):** The entire sine wave is shifted upward by a constant $+\Gamma/(2\pi R)$.
+
+###### 2. What the Shift Does Physically
+
+- **Breaks the symmetry**: The top and bottom speeds are no longer equal. One side becomes faster, the other slower.
+- **Moves the stagnation points**: The front and rear stagnation points shift away from $0$ and $\pi$. This tilts the flow pattern.
+- **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
+
+###### 3. Why It Generates Lift
+
+- Faster flow on one surface → **lower pressure** (Bernoulli's principle).
+- Slower flow on the opposite surface → **higher pressure**.
+- This pressure difference creates a net upward (or downward) force.
+- Mathematically, this force is exactly:
+
+$$
+L = \rho_\infty U_\infty \Gamma
+$$
+
+
+###### 💡 Bottom Line
+
+> The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).
