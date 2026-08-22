@@ -864,7 +864,13 @@ $$
 - $\beta$ = camber angle (geometric tilt of the cylinder due to vertical offset $\mu_y$; it represents the airfoil’s intrinsic curvature).
 - $\alpha + \beta$ = **effective angle of attack**.
 
-**Key insight**: Even at zero geometric angle of attack ($\alpha = 0$), a cambered airfoil ($\beta > 0$) still produces a non‑zero circulation $\Gamma = 4\pi R U_\infty \sin\beta$, which generates positive lift.
+**Key insight**: Even at zero geometric angle of attack ($\alpha = 0$), a cambered airfoil ($\beta > 0$) still produces a non‑zero circulation  
+
+$$ 
+\Gamma = 4\pi R U_\infty \sin\beta  
+$$ 
+
+which generates positive lift.  
 
 
 #### 2.4.2 Appendix - How to get the Surface Velocity, $V_\theta(\theta)$ (see 2.4.1.A) 
