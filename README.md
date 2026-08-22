@@ -854,6 +854,10 @@ $$
 \boxed{\Gamma = 4 \pi R U_\infty \sin(\alpha + \beta)}
 $$
 
+$$
+\bbox{\Gamma = 4 \pi R U_\infty \sin(\alpha + \beta)}
+$$
+
 ![camber angle](images/camber_angle.png) 
 
 ##### F. Summary
