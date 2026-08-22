@@ -1010,3 +1010,5 @@ v_\theta = -2U \sin\theta + \frac{\Gamma}{2\pi a}
 $$
 
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
+
+![Joukowsky mapping_2](images/v_theta.png)  
