@@ -862,3 +862,142 @@ $$
 - $\alpha + \beta$ = **effective angle of attack**.
 
 **Key insight**: Even at zero geometric angle of attack ($\alpha = 0$), a cambered airfoil ($\beta > 0$) still produces a non‑zero circulation $\Gamma = 4\pi R U_\infty \sin\beta$, which generates positive lift.
+
+
+#### 2.4.2 Appendix - How to get the Surface Velocity on the Cylinder of 2.4.1.A 
+
+##### Derivation of Tangential Velocity on a Cylinder Surface
+
+We can derive $v_\theta$ (the tangential velocity on the cylinder surface) directly from the complex potential for a circular cylinder of radius $R$ in a uniform flow at an angle of attack $\alpha$, with circulation $\Gamma$:
+
+$$
+W(\zeta) = U_\infty \left( \zeta e^{-i\alpha} + \frac{R^2}{\zeta e^{-i\alpha}} \right) - \frac{i\Gamma}{2\pi} \ln\left(\frac{\zeta}{R}\right)
+$$
+
+Here is the step‑by‑step derivation to extract $v_\theta$ on the cylinder boundary $\zeta = R e^{i\theta}$.
+
+ 
+
+###### Step 1: Differentiate to get the complex velocity
+
+The complex velocity in the $\zeta$-plane is given by:
+
+$$
+\frac{dW}{d\zeta} = u - iv
+$$
+
+Differentiate each term of $W(\zeta)$:
+
+- Derivative of $U_\infty \zeta e^{-i\alpha}$ is $U_\infty e^{-i\alpha}$.
+- Derivative of $U_\infty \dfrac{R^2 e^{i\alpha}}{\zeta}$ is $-U_\infty \dfrac{R^2 e^{i\alpha}}{\zeta^2}$.
+- Derivative of $-\dfrac{i\Gamma}{2\pi} \ln(\zeta/R)$ is $-\dfrac{i\Gamma}{2\pi \zeta}$ (since $\ln(\zeta/R) = \ln\zeta - \ln R$, and the derivative of the constant $\ln R$ is zero).
+
+So, the complex velocity is:
+
+$$
+\frac{dW}{d\zeta} = U_\infty e^{-i\alpha} - U_\infty \frac{R^2 e^{i\alpha}}{\zeta^2} - \frac{i\Gamma}{2\pi \zeta}
+$$
+
+ 
+
+###### Step 2: Evaluate on the cylinder surface
+
+On the cylinder, $\zeta = R e^{i\theta}$. Substitute this into the derivative:
+
+$$
+\frac{dW}{d\zeta} = U_\infty e^{-i\alpha} - U_\infty \frac{R^2 e^{i\alpha}}{(R e^{i\theta})^2} - \frac{i\Gamma}{2\pi (R e^{i\theta})}
+$$
+
+Simplify the second term:
+
+$$
+\frac{R^2 e^{i\alpha}}{R^2 e^{2i\theta}} = e^{i\alpha} e^{-2i\theta} = e^{i(\alpha - 2\theta)}
+$$
+
+And the third term:
+
+$$
+\frac{i\Gamma}{2\pi R} e^{-i\theta}
+$$
+
+Thus:
+
+$$
+\frac{dW}{d\zeta} = U_\infty e^{-i\alpha} - U_\infty e^{i(\alpha - 2\theta)} - \frac{i\Gamma}{2\pi R} e^{-i\theta}
+$$
+
+ 
+
+###### Step 3: Convert to polar velocity components
+
+In polar coordinates, the complex velocity relates to the radial and tangential components as:
+
+$$
+\frac{dW}{d\zeta} = (v_r - i v_\theta) e^{-i\theta}
+$$
+
+Therefore, to isolate $v_r$ and $v_\theta$, multiply both sides by $e^{i\theta}$:
+
+$$
+v_r - i v_\theta = e^{i\theta} \frac{dW}{d\zeta}
+$$
+
+Substitute the expression from Step 2:
+
+$$
+v_r - i v_\theta = U_\infty e^{i(\theta - \alpha)} - U_\infty e^{i(\alpha - \theta)} - \frac{i\Gamma}{2\pi R}
+$$
+
+Notice that:
+
+$$
+e^{i(\theta - \alpha)} - e^{i(\alpha - \theta)} = e^{i(\theta - \alpha)} - e^{-i(\theta - \alpha)}
+$$
+
+Using Euler's formula, $e^{ix} - e^{-ix} = 2i\sin x$, so:
+
+$$
+e^{i(\theta - \alpha)} - e^{-i(\theta - \alpha)} = 2i \sin(\theta - \alpha)
+$$
+
+Substitute this back:
+
+$$
+v_r - i v_\theta = U_\infty \left( 2i \sin(\theta - \alpha) \right) - \frac{i\Gamma}{2\pi R}
+$$
+
+Factor out the $i$:
+
+$$
+v_r - i v_\theta = i \left( 2U_\infty \sin(\theta - \alpha) - \frac{\Gamma}{2\pi R} \right)
+$$
+
+ 
+
+###### Step 4: Extract $v_r$ and $v_\theta$
+
+Separate the real and imaginary parts:
+
+- **Real part:** $v_r = 0$ → This confirms the impermeability condition (no flow through the cylinder surface).
+- **Imaginary part:** $-v_\theta = 2U_\infty \sin(\theta - \alpha) - \dfrac{\Gamma}{2\pi R}$
+
+Therefore, the tangential velocity on the cylinder surface is:
+
+$$
+\boxed{v_\theta = -2U_\infty \sin(\theta - \alpha) + \frac{\Gamma}{2\pi R}}
+$$
+
+ 
+
+###### Physical Interpretation
+
+- The term $-2U_\infty \sin(\theta - \alpha)$ is the contribution from the freestream flow as it flows around the cylinder at angle of attack.
+- The term $+\dfrac{\Gamma}{2\pi R}$ is a constant shift in the tangential velocity caused by the circulation.
+
+This matches the classic result: if you set $\alpha = 0$ and $R = a$, you recover the familiar formula:
+
+$$
+v_\theta = -2U \sin\theta + \frac{\Gamma}{2\pi a}
+$$
+
+So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
