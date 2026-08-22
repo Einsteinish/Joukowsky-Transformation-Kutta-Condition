@@ -581,7 +581,8 @@ To obtain a realistic airfoil in the $z$-plane:
   - Shift along the **negative real axis** → adds thickness to the airfoil.
   - Shift along the **positive imaginary axis** → adds camber (curvature) to the airfoil.
 - **Trailing Edge Mapping:** The circle passes through the critical point $\zeta = c$, which maps directly to the sharp trailing edge of the airfoil in the $z$-plane.
-
+- **Scale Parameter:** $c$.
+   
 #### 2.3.1 Joukowsky Mapping Code  
 
 ```python
