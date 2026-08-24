@@ -1052,10 +1052,10 @@ $$
 
 ##### 💡 Bottom Line
 
-> The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).
-
-
-#### Pressure Coefficient $C_p$
+> The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).  
+  
+  
+#### 2.4.4 Pressure Coefficient $C_p$
 
 ![cp_alpha00_beta52.png](images/cp_alpha00_beta52.png)  
 
