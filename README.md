@@ -247,7 +247,7 @@ $$
 
 for the circulation sign convention we're using.
 
-This is probably the most useful form for your derivation because it shows that introducing the attack angle simply shifts the angular dependence from $\theta$ to $\theta - \alpha$. 
+This is probably the most useful form for our derivation because it shows that introducing the attack angle simply shifts the angular dependence from $\theta$ to $\theta - \alpha$. 
 
 
 ### 1.9 Appendix I - How do we get: $\frac{dW}{d\zeta} = u - iv$
@@ -1065,7 +1065,7 @@ $$
 
 ##### 2.4.4.1. Reading the Flow Along the Chord
 
-Let's walk from the leading edge to the trailing edge and see what the $C_p$ curve tells you about the flow.
+Let's walk from the leading edge to the trailing edge and see what the $C_p$ curve tells us about the flow.
 
 
 
@@ -1074,7 +1074,7 @@ Let's walk from the leading edge to the trailing edge and see what the $C_p$ cur
 At the very nose of the airfoil, the flow comes to a complete stop.
 
 - Here, $V = 0$ → $C_p = 1$.
-- On your plot, look for the reddest points ($C_p \approx 1$) at the far left of the horizontal axis – they cluster around $x \approx -2.03$.
+- On our plot, look for the reddest points ($C_p \approx 1$) at the far left of the horizontal axis – they cluster around $x \approx -2.03$.
 
 
 
@@ -1084,7 +1084,7 @@ Immediately after the stagnation point, the flow must rapidly curve around the a
 
 - The velocity jumps above $U_\infty$ → $C_p$ becomes **negative**.
 - The lowest $C_p$ (darkest blue, e.g., $-2$ to $-4$) marks the **suction peak** – the region of highest local speed and lowest pressure.
-- In your scatter plot, you'll see a sharp plunge from red (stagnation) into dark blue just to the right of the leading edge. This rapid drop is the signature of a well‑designed aerodynamic shape.
+- In our scatter plot, you'll see a sharp plunge from red (stagnation) into dark blue just to the right of the leading edge. This rapid drop is the signature of a well‑designed aerodynamic shape.
 
  
 
@@ -1096,7 +1096,7 @@ This asymmetry is crucial:
 
 > Low pressure on top + higher pressure on bottom = net upward force (**lift**).
 
-Even though $\alpha = 0^\circ$, your airfoil has camber ($y_0 = 0.1$, $\beta \approx 5.2^\circ$), so the Kutta condition forces a non‑zero circulation $\Gamma$, which creates this asymmetric distribution.
+Even though $\alpha = 0^\circ$, our airfoil has camber ($y_0 = 0.1$, $\beta \approx 5.2^\circ$), so the Kutta condition forces a non‑zero circulation $\Gamma$, which creates this asymmetric distribution.
 
  
 
@@ -1113,7 +1113,7 @@ As the flow approaches the trailing edge, it must slow down to meet the freestre
 
 At the sharp trailing edge, the Kutta condition requires that the flow leaves smoothly, meaning the pressures from the upper and lower surfaces must meet exactly at the same value.
 
-In your plot, you should see that the colours (and the vertical positions) of the upper and lower surface points become almost identical near $x = 2.0$. This confirms that:
+In our plot, you should see that the colours (and the vertical positions) of the upper and lower surface points become almost identical near $x = 2.0$. This confirms that:
 
 - The circulation $\Gamma$ is correctly chosen,
 - The flow exits without a discontinuity.
