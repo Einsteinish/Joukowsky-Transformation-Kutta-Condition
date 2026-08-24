@@ -998,7 +998,7 @@ $$
 
  
 
-##### Physical Interpretation
+##### Physical Interpretation of $v_\theta$
 
 - The term $-2U_\infty \sin(\theta - \alpha)$ is the contribution from the freestream flow as it flows around the cylinder at angle of attack.
 - The term $+\dfrac{\Gamma}{2\pi R}$ is a constant shift in the tangential velocity caused by the circulation.
@@ -1053,3 +1053,12 @@ $$
 ##### 💡 Bottom Line
 
 > The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).
+
+
+#### Pressure Coefficient $C_p$
+
+![cp_alpha00_beta52.png](images/cp_alpha00_beta52.png)  
+
+[View the full Python script here →](Python/cp_alpha00_beta52.py)  
+
+[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/cp_alpha00_beta52.py)  
