@@ -1025,7 +1025,7 @@ The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the 
 ##### 1. The Shape of the Curve
 
 - **Without circulation ($\Gamma = 0$):** The curve is a pure sine wave.
-  - $v_\theta = 0$ at the front ($\theta = 0$) and rear ($\theta = \pi$) → stagnation points.
+  - $v_\theta = 0$ at the front ($\theta = \pi$) and rear ($\theta = 0 or $\theta = \pi$) → stagnation points.
   - Maximum speed occurs at the top ($\theta = \pi/2$) and bottom ($\theta = 3\pi/2$).
   - The flow is **symmetric**: top and bottom speeds are equal in magnitude.
   - **Net force = Zero** (no lift).
@@ -1035,7 +1035,7 @@ The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the 
 ##### 2. What the Shift Does Physically
 
 - **Breaks the symmetry**: The top and bottom speeds are no longer equal. One side becomes faster, the other slower.
-- **Moves the stagnation points**: The front and rear stagnation points shift away from $0$ and $\pi$. This tilts the flow pattern.
+- **Moves the stagnation points**: The front and rear stagnation points shift away from $\pi$ and $0$(moving downwards toward the lower surface). This tilts the flow pattern.
 - **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
 
 ##### 3. Why It Generates Lift
