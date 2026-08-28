@@ -873,7 +873,7 @@ $$
 which generates positive lift.  
 
 
-#### 2.4.2 Appendix - How to get the Surface Velocity, $V_\theta(\theta)$ (see 2.4.1.A) 
+#### 2.4.2 Appendix - How to get the Surface Velocity (I), $V_\theta(\theta)$ (see 2.4.1.A) 
 
 ##### Derivation of Tangential Velocity on a Cylinder Surface
 
@@ -1011,6 +1011,149 @@ $$
 
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
 
+#### 2.4.3 Appendix - How to get the Surface Velocity (II)
+Derivation of Tangential Velocity \( v_\theta \) and the Kutta Condition in the Joukowski Transformation.
+You will see a step-by-step derivation of the tangential velocity distribution on the surface of a cylinder under potential flow with circulation. It demonstrates the exact mathematical step where the strength of the bound vortex \( \Gamma \) is uniquely fixed by the **Kutta condition**.
+
+
+##### 2.4.3.1 Starting Point: Potential Flow Around a Cylinder
+
+The Joukowski transformation maps a circle in the \( \zeta \)-plane to an airfoil shape in the \( z \)-plane. First, we solve for the flow field around the circle in the \( \zeta \)-plane.
+
+For a cylinder of radius \( a \), subject to a uniform flow \( U_\infty \) (at an angle of attack \( \alpha \)) and a circulation \( \Gamma \), the complex potential \( w(\zeta) \) is given by:
+
+$$
+w(\zeta) = U_\infty\left(\zeta e^{-i\alpha} + \frac{a^2 e^{i\alpha}}{\zeta}\right) - \frac{i\Gamma}{2\pi}\ln \zeta
+$$
+
+##### A. Stream Function \( \psi(r, \theta) \)
+
+By definition, the complex potential relates to the velocity potential \( \phi \) and the stream function \( \psi \) as:
+
+$$
+w(\zeta) = \phi + i\psi
+$$
+
+Substituting \( \zeta = r e^{i\theta} \):
+
+**Uniform flow terms**:
+
+$$
+\zeta e^{-i\alpha} = r e^{i(\theta - \alpha)} = r \left[ \cos(\theta - \alpha) + i \sin(\theta - \alpha) \right]
+$$
+
+$$
+\frac{a^2 e^{i\alpha}}{\zeta} = \frac{a^2 e^{i\alpha}}{r e^{i\theta}} = \frac{a^2}{r} e^{-i(\theta - \alpha)} = \frac{a^2}{r} \left[ \cos(\theta - \alpha) - i \sin(\theta - \alpha) \right]
+$$
+
+**Circulation term**:
+
+$$
+\ln \zeta = \ln\left(r e^{i\theta}\right) = \ln r + i\theta
+$$
+
+$$
+-\frac{i\Gamma}{2\pi}\ln \zeta = -\frac{i\Gamma}{2\pi}(\ln r + i\theta) = \frac{\Gamma \theta}{2\pi} - i\frac{\Gamma}{2\pi}\ln r
+$$
+
+**Combine real and imaginary parts**:
+
+$$
+w(\zeta) = \underbrace{\left[ U_\infty \left( r + \frac{a^2}{r} \right) \cos(\theta - \alpha) + \frac{\Gamma \theta}{2\pi} \right]}_{\phi(r,\theta) \text{ (Velocity Potential)}} + i \underbrace{\left[ U_\infty \left( r - \frac{a^2}{r} \right) \sin(\theta - \alpha) - \frac{\Gamma}{2\pi} \ln r \right]}_{\psi(r,\theta) \text{ (Stream Function)}}
+$$
+
+Taking the imaginary part \( \text{Im}\{w(\zeta)\} \) yields the stream function:
+
+$$
+\boxed{\psi(r,\theta) = U_\infty\left(r - \frac{a^2}{r}\right)\sin(\theta-\alpha) - \frac{\Gamma}{2\pi}\ln r}
+$$
+
+
+##### 2.4.3.2  Velocity Components in Polar Coordinates
+
+In polar coordinates, the velocity components are derived from the stream function as:
+
+$$
+v_r = \frac{1}{r}\frac{\partial \psi}{\partial \theta}, \qquad v_\theta = -\frac{\partial \psi}{\partial r}
+$$
+
+Differentiating \( \psi \) with respect to \( r \):
+
+$$
+v_\theta = -\left[U_\infty\left(1+\frac{a^2}{r^2}\right)\sin(\theta-\alpha)\right] + \frac{\Gamma}{2\pi r}
+$$
+
+ 
+
+##### 2.4.3.3 Evaluation at the Cylinder Surface (\( r = a \))
+
+Substituting \( r = a \) gives:
+
+- **Radial velocity**: \( v_r = 0 \) (no flow through the solid surface, boundary condition satisfied).
+- **Tangential velocity**:
+
+$$
+\boxed{v_\theta\Big\vert{}_{r=a} = -2U_\infty\sin(\theta-\alpha) + \frac{\Gamma}{2\pi a}}
+$$
+
+**Physical Meanings of the Two Terms**
+
+| Term | Source | Description |
+| :--- | :--- | :--- |
+| \( -2U_\infty\sin(\theta-\alpha) \) | Uniform flow | Symmetric surface velocity distribution with no circulation (\( \Gamma = 0 \)). |
+| \( \frac{\Gamma}{2\pi a} \) | Circulation | Rotational component added uniformly across the entire surface. |
+
+ 
+
+##### 2.4.3.4 Applying the Kutta Condition: Determining the Unique Value of \( \Gamma \)
+
+Let \( \theta = \theta_{TE} \) be the point on the circle corresponding to the trailing edge in the Joukowski transformation (typically \( \theta_{TE} = 0 \) or \( \pi \) for a standard symmetric circle).
+
+> **Kutta Condition**: The tangential velocity at the trailing edge must be zero to prevent an infinite velocity at the sharp edge and ensure smooth flow exit.
+
+Set \( v_\theta \) to zero at \( \theta = \theta_{TE} \):
+
+$$
+v_\theta\Big\vert{}_{\theta=\theta_{TE}} = 0 \;\Rightarrow\; -2U_\infty\sin(\theta_{TE}-\alpha) + \frac{\Gamma}{2\pi a} = 0
+$$
+
+Solving for \( \Gamma \):
+
+$$
+\Gamma = 4\pi a\, U_\infty \sin(\theta_{TE}-\alpha)
+$$
+
+For a standard symmetric circle where the trailing edge corresponds to \( \theta_{TE} = 0 \), this simplifies to:
+
+$$
+\boxed{\Gamma = -4\pi a\, U_\infty \sin\alpha}
+$$
+
+ 
+
+##### 2.4.3.5 Summary and Physical Interpretation
+
+The derived value of \( \Gamma \) is the **unique circulation value fixed by the Kutta condition**.
+
+- **Invariance of Circulation**: Because circulation is preserved during conformal mapping, this cylinder-calculated \( \Gamma \) is identical to the circulation around the actual Joukowski airfoil.
+- **Lift Calculation**: Substituting this \( \Gamma \) into the **Kutta-Joukowski theorem** yields the lift force:
+
+$$
+\boxed{L = \rho_\infty U_\infty \Gamma}
+$$
+
+Thus, the Kutta condition resolves the otherwise infinite possible values of circulation, providing a physically unique lift solution based on the angle of attack.
+
+
+##### 2.4.3.6 How to Use This Derivation
+
+This derivation serves as a supplementary mathematical section for understanding:
+
+- Conformal mapping in aerodynamics.
+- The mathematical basis of the Kutta condition.
+- How potential flow theory predicts lift prior to introducing viscosity.
+
+
 ![Joukowsky mapping_2](images/v_theta.png)  
 
 [View the full Python script here →](Python/v_theta.py)  
@@ -1018,7 +1161,7 @@ So, the derivation is clean, and this specific complex potential is perfectly de
 [Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta.py)  
 
 
-#### 2.4.3 Appendix - The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
+#### 2.4.4 Appendix - The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
 
 The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the cylinder surface at each angle.
 
@@ -1055,7 +1198,7 @@ $$
 > The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).  
   
   
-#### 2.4.4 Pressure Coefficient $C_p$
+#### 2.4.5 Pressure Coefficient $C_p$
 
 ![cp_alpha00_beta52.png](images/cp_alpha00_beta52.png)  
 
@@ -1063,7 +1206,7 @@ $$
 
 [Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/cp_alpha00_beta52.py)  
 
-##### 2.4.4.1. Reading the Flow Along the Chord
+##### 2.4.5.1. Reading the Flow Along the Chord
 
 Let's walk from the leading edge to the trailing edge and see what the $C_p$ curve tells us about the flow.
 
@@ -1120,7 +1263,7 @@ In our plot, you should see that the colours (and the vertical positions) of the
 
  
 
-##### 2.4.4.2 🎨 What Does the Colour Tell You at a Glance?
+##### 2.4.5.2 🎨 What Does the Colour Tell You at a Glance?
 
 | Colour | $C_p$ Range | Meaning |
 | :--- | :--- | :--- |
@@ -1133,7 +1276,7 @@ The colour map makes it extremely easy to spot the location of the suction peak 
 
 ---
 
-##### 2.4.4.3 📊 How to Judge Aerodynamic Performance from This Plot
+##### 2.4.5.3 📊 How to Judge Aerodynamic Performance from This Plot
 
 1. **Deeper suction peak** (more negative $C_p$) means higher local velocity → larger pressure difference → more lift.  
    But if the peak is too sharp, it may cause premature flow separation (stall) at higher angles.
@@ -1144,7 +1287,7 @@ The colour map makes it extremely easy to spot the location of the suction peak 
 3. The **location of the suction peak** tells you about the loading distribution.  
    A peak that is very far forward (close to the nose) indicates a highly cambered or high‑lift configuration.
 
-##### 2.4.4.3 🛩️ The Current Case
+##### 2.4.5.4 🛩️ The Current Case
 
 - $\alpha = 0^\circ$, $\beta \approx 5.2^\circ$ → effective angle of attack $= 5.2^\circ$.
 - The suction peak is healthy,
