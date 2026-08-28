@@ -1131,27 +1131,128 @@ $$
 
  
 
-##### 2.4.3.5 Summary and Physical Interpretation
+##### 2.4.3.5 Quantitative Velocity Distribution ($v_\theta$) on a Cylinder Surface with Circulation
 
-The derived value of $\Gamma$ is the **unique circulation value fixed by the Kutta condition**.
+This section extends the previous derivation of the Kutta condition by explicitly calculating the tangential velocities on the top and bottom surfaces of a cylinder. It provides the exact mathematical proof that the bound vortex accelerates the flow on the upper surface while decelerating it on the lower surface.
 
-- **Invariance of Circulation**: Because circulation is preserved during conformal mapping, this cylinder-calculated $\Gamma$ is identical to the circulation around the actual Joukowski airfoil.
-- **Lift Calculation**: Substituting this $\Gamma$ into the **Kutta-Joukowski theorem** yields the lift force:
+
+**A. Setting the Trailing Edge and Substituting the Circulation**
+
+Setting the trailing edge at $\theta_{TE} = 0$, the uniquely determined circulation from the Kutta condition is:
 
 $$
-\boxed{L = \rho_\infty U_\infty \Gamma}
+\Gamma = -4\pi a \, U_\infty \sin\alpha
 $$
 
-Thus, the Kutta condition resolves the otherwise infinite possible values of circulation, providing a physically unique lift solution based on the angle of attack.
+Substituting this into the general tangential velocity formula $v_\theta(\theta) = -2U_\infty\sin(\theta-\alpha) + \frac{\Gamma}{2\pi a}$ yields:
+
+$$
+v_\theta(\theta) = -2U_\infty \sin(\theta-\alpha) - 2U_\infty \sin\alpha
+$$
+
+Which simplifies to:
+
+$$
+\boxed{v_\theta(\theta) = -2U_\infty \left[ \sin(\theta-\alpha) + \sin\alpha \right]}
+$$
+
+---
+
+**B. Velocity on the Top Surface ($\theta = \pi/2$)**
+
+In the cylinder coordinate system where $\theta_{TE} = 0$ is the trailing edge, the top of the cylinder ($\theta = \pi/2$) corresponds to the upper surface.
+
+Substituting $\theta = \pi/2$:
+
+$$
+v_\theta\bigg|_{\theta=\pi/2} = -2U_\infty \left[ \sin\left(\frac{\pi}{2} - \alpha\right) + \sin\alpha \right]
+= -2U_\infty \left[ \cos\alpha + \sin\alpha \right]
+$$
+
+Considering only the magnitude (speed):
+
+$$
+\boxed{|v_{\theta, \text{top}}| = 2U_\infty \left( \cos\alpha + \sin\alpha \right)}
+$$
+
+---
+
+**C. Velocity on the Bottom Surface ($\theta = -\pi/2$ or $3\pi/2$)**
+
+The bottom surface corresponds to $\theta = -\pi/2$.
+
+Substituting $\theta = -\pi/2$:
+
+$$
+v_\theta\bigg|_{\theta=-\pi/2} = -2U_\infty \left[ \sin\left(-\frac{\pi}{2} - \alpha\right) + \sin\alpha \right]
+= -2U_\infty \left[ -\cos\alpha + \sin\alpha \right]
+$$
+
+Taking the magnitude:
+
+$$
+\boxed{|v_{\theta, \text{bottom}}| = 2U_\infty \left( \cos\alpha - \sin\alpha \right)}
+$$
+
+---
+
+**D. Physical Interpretation of the Results**
+
+For an angle of attack $\alpha > 0$:
+
+$$
+|v_{\theta, \text{top}}| = 2U_\infty(\cos\alpha + \sin\alpha) > |v_{\theta, \text{bottom}}| = 2U_\infty(\cos\alpha - \sin\alpha)
+$$
+
+**E. Key Takeaways**
+
+- **Velocity Difference**: The top surface is exactly **$4U_\infty \sin\alpha$** faster than the bottom surface.
+- **Bound Vortex Effect**: This numerically confirms the physical description that *the bound vortex accelerates the upper surface flow and decelerates the lower surface flow*.
+- **Lift Generation**: Since the velocity is higher on the top, Bernoulli's principle dictates a lower pressure there, resulting in a net upward pressure difference—which is the source of lift.
 
 
-##### 2.4.3.6 How to Use This Derivation
 
-This derivation serves as a supplementary mathematical section for understanding:
+**F. Validation Check at Zero Angle of Attack ($\alpha = 0$)**
 
-- Conformal mapping in aerodynamics.
-- The mathematical basis of the Kutta condition.
-- How potential flow theory predicts lift prior to introducing viscosity.
+When the angle of attack is zero, the circulation becomes $\Gamma = 0$. The flow reverts to the symmetric, non-circulating case around the cylinder.
+
+Substituting $\alpha = 0$ into our results:
+
+$$
+|v_{\theta, \text{top}}| = 2U_\infty(\cos 0 + \sin 0) = 2U_\infty
+$$
+
+$$
+|v_{\theta, \text{bottom}}| = 2U_\infty(\cos 0 - \sin 0) = 2U_\infty
+$$
+
+Thus:
+
+$$
+\boxed{|v_{\theta, \text{top}}| = |v_{\theta, \text{bottom}}| = 2U_\infty}
+$$
+
+**G. Agreement with Classical Theory**
+
+This result perfectly matches the well-known classical solution for potential flow around a non-rotating cylinder, where the maximum surface speed is exactly $2U_\infty$. The symmetry is fully restored, confirming the consistency of our derived equations.
+
+
+
+**H. Connection to Pressure Difference (Bernoulli's Equation)**
+
+Substituting the top and bottom velocities into Bernoulli's equation:
+
+$$
+P_\infty + \frac{1}{2}\rho U_\infty^2 = P_{\text{surface}} + \frac{1}{2}\rho v_{\theta}^2
+$$
+
+The pressure difference $\Delta P = P_{\text{bottom}} - P_{\text{top}}$ can be quantitatively calculated. This yields the exact pressure imbalance that generates the net lift force, providing the rigorous calculation basis for the statement:
+
+> *"This velocity difference creates the pressure difference."*
+
+
+
+
 
 
 ![Joukowsky mapping_2](images/v_theta.png)  
