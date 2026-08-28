@@ -873,7 +873,7 @@ $$
 which generates positive lift.  
 
 
-#### 2.4.2 Appendix - How to get the Surface Velocity (I), $V_\theta(\theta)$ (see 2.4.1.A) 
+#### 2.4.2 Appendix - How to get the Surface Velocity (Method I), $V_\theta(\theta)$ (see 2.4.1.A) 
 
 ##### Derivation of Tangential Velocity on a Cylinder Surface
 
@@ -1011,7 +1011,7 @@ $$
 
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
 
-#### 2.4.3 Appendix - How to get the Surface Velocity (II)
+#### 2.4.3 Appendix - How to get the Surface Velocity (Method II)
 Derivation of Tangential Velocity $v_\theta$ and the Kutta Condition in the Joukowski Transformation.
 You will see a step-by-step derivation of the tangential velocity distribution on the surface of a cylinder under potential flow with circulation. It demonstrates the exact mathematical step where the strength of the bound vortex $\Gamma$ is uniquely fixed by the **Kutta condition**.
 
@@ -1062,7 +1062,7 @@ $$
 W(\zeta) = \underbrace{\left[ U_\infty \left( r + \frac{a^2}{r} \right) \cos(\theta - \alpha) + \frac{\Gamma \theta}{2\pi} \right]}_{\phi(r,\theta) \text{ (Velocity Potential)}} + i \underbrace{\left[ U_\infty \left( r - \frac{a^2}{r} \right) \sin(\theta - \alpha) - \frac{\Gamma}{2\pi} \ln r \right]}_{\psi(r,\theta) \text{ (Stream Function)}}
 $$
 
-Taking the imaginary part $\text{Im}\{w(\zeta)\}$ yields the stream function:
+Taking the imaginary part $\text{Im}\{W(\zeta)\}$ yields the stream function:
 
 $$
 \boxed{\psi(r,\theta) = U_\infty\left(r - \frac{a^2}{r}\right)\sin(\theta-\alpha) - \frac{\Gamma}{2\pi}\ln r}
