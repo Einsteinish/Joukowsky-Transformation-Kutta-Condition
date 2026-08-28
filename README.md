@@ -684,7 +684,7 @@ $$
 - **Radius**:  
 
 $$
-R = \sqrt{(1 - \chi_0)^2 + \eta_0^2}
+a = \sqrt{(1 - \chi_0)^2 + \eta_0^2}
     = \sqrt{1.2^2 + 0.1^2}
     = \sqrt{1.45}
     \approx 1.204
@@ -698,7 +698,7 @@ This means the circle is shifted **left by $0.2$** and **up by $0.1$** relative 
 
 ##### A. $\chi_0 = -0.2$ (Horizontal shift left) → Controls **Thickness**
 
-- Because the center is shifted left, the radius $R$ becomes greater than $1$ ($R \approx 1.204$).  
+- Because the center is shifted left, the radius $R$ becomes greater than $1$ ($a \approx 1.204$).  
 - The circle now encloses the point $\zeta = -1$ (which maps to $z = -2$ inside the airfoil).  
 - The more negative $\chi_0$ (e.g., $-0.3$), the larger the radius and the **thicker** the airfoil becomes.  
 - With $\chi_0 = -0.2$, you get a moderately thick airfoil (roughly 10-12% thickness‑to‑chord ratio).  
