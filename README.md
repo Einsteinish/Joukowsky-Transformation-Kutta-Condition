@@ -463,7 +463,7 @@ $$
 \Gamma = \int_0^{2\pi} (a\Omega) a d\theta.
 $$
 
-Since $R$ and $\Omega$ are constants,
+Since $a$ and $\Omega$ are constants,
 
 $$
 \Gamma = a^2 \Omega \int_0^{2\pi} d\theta.
