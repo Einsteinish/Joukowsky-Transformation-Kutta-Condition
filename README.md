@@ -19,7 +19,7 @@ $$
 The cylinder is:
 
 $$
-|\zeta| = R.
+|\zeta| = a.
 $$
 
 Take the uniform flow to be in the $+x$ direction.
@@ -29,7 +29,7 @@ Take the uniform flow to be in the $+x$ direction.
 The complex potential for uniform flow plus a doublet plus circulation is:
 
 $$
-W(\zeta) = U_\infty\left(\zeta + \frac{R^2}{\zeta}\right) - \frac{i\Gamma}{2\pi} \log \zeta
+W(\zeta) = U_\infty\left(\zeta + \frac{a^2}{\zeta}\right) - \frac{i\Gamma}{2\pi} \log \zeta
 $$
 
 where:
@@ -41,7 +41,7 @@ $$
 The three terms have straightforward interpretations:
 
 - **$U_\infty\zeta$** is the uniform flow,
-- **$U_\infty \frac{R^2}{\zeta}$** is the doublet that creates the circular cylinder boundary, and
+- **$U_\infty \frac{a^2}{\zeta}$** is the doublet that creates the circular cylinder boundary, and
 - **$-\frac{i\Gamma}{2\pi} \log \zeta$** introduces circulation.
 
 ### 1.3 Complex Velocity
@@ -55,7 +55,7 @@ $$
 we obtain:
 
 $$
-u - iv = U_\infty\left(1 - \frac{R^2}{\zeta^2}\right) - \frac{i\Gamma}{2\pi\zeta}.
+u - iv = U_\infty\left(1 - \frac{a^2}{\zeta^2}\right) - \frac{i\Gamma}{2\pi\zeta}.
 $$
 
 This is the complete velocity field in the complex plane.
@@ -65,13 +65,13 @@ This is the complete velocity field in the complex plane.
 Put:
 
 $$
-\zeta = Re^{i\theta}.
+\zeta = ae^{i\theta}.
 $$
 
 Then:
 
 $$
-\frac{dW}{d\zeta} = U_\infty(1 - e^{-2i\theta}) - \frac{i\Gamma}{2\pi R} e^{-i\theta}.
+\frac{dW}{d\zeta} = U_\infty(1 - e^{-2i\theta}) - \frac{i\Gamma}{2\pi a} e^{-i\theta}.
 $$
 
 Converting to polar velocity components gives:
@@ -85,7 +85,7 @@ on $r = R$, as required by the impermeability condition.
 The tangential velocity is:
 
 $$
-v_\theta = -2U_\infty\sin\theta + \frac{\Gamma}{2\pi R}
+v_\theta = -2U_\infty\sin\theta + \frac{\Gamma}{2\pi a}
 $$
 
 up to the sign convention chosen for positive circulation.
@@ -109,13 +109,13 @@ $$
 Therefore:
 
 $$
-p(\theta) = p_\infty + \frac{1}{2}\rho \left[U_\infty^2 - \left(-2U_\infty\sin\theta + \frac{\Gamma}{2\pi R}\right)^2 \right]
+p(\theta) = p_\infty + \frac{1}{2}\rho \left[U_\infty^2 - \left(-2U_\infty\sin\theta + \frac{\Gamma}{2\pi a}\right)^2 \right]
 $$
 
 or, in terms of the pressure coefficient:
 
 $$
-C_p = 1 - \left(-2\sin\theta + \frac{\Gamma}{2\pi U_\infty R}\right)^2.
+C_p = 1 - \left(-2\sin\theta + \frac{\Gamma}{2\pi U_\infty a}\right)^2.
 $$
 
 ### 1.6 Lift: The Kutta–Joukowski Result
@@ -145,13 +145,13 @@ This is the **Kutta–Joukowski theorem** emerging directly from the complex-pot
 The entire problem is encoded in:
 
 $$
-W(\zeta) = U_\infty\left(\zeta + \frac{R^2}{\zeta}\right) - \frac{i\Gamma}{2\pi} \log \zeta
+W(\zeta) = U_\infty\left(\zeta + \frac{a^2}{\zeta}\right) - \frac{i\Gamma}{2\pi} \log \zeta
 $$
 
 and each term has a physical role:
 
 - **Uniform flow**: $U_\infty\zeta$
-- **Cylinder (doublet)**: $U_\infty \dfrac{R^2}{\zeta}$
+- **Cylinder (doublet)**: $U_\infty \dfrac{a^2}{\zeta}$
 - **Circulation**: $-\dfrac{i\Gamma}{2\pi} \log \zeta$
 
 
@@ -165,13 +165,13 @@ If the uniform flow approaches the cylinder at an angle of attack $\alpha$ relat
 Starting from
 
 $$
-W(\zeta) = U_\infty \left( \zeta + \frac{R^2}{\zeta} \right) - \frac{i\Gamma}{2\pi} \log \zeta,
+W(\zeta) = U_\infty \left( \zeta + \frac{a^2}{\zeta} \right) - \frac{i\Gamma}{2\pi} \log \zeta,
 $$
 
 the modified complex potential is
 
 $$
-W(\zeta) = U_\infty \left( e^{-i\alpha} \zeta + e^{i\alpha} \frac{R^2}{\zeta} \right) - \frac{i\Gamma}{2\pi} \log \zeta,
+W(\zeta) = U_\infty \left( e^{-i\alpha} \zeta + e^{i\alpha} \frac{a^2}{\zeta} \right) - \frac{i\Gamma}{2\pi} \log \zeta,
 $$
 
 where:
@@ -192,24 +192,24 @@ $$
 The corresponding doublet term must be
 
 $$
-W_D = U_\infty e^{i\alpha} \frac{R^2}{\zeta}
+W_D = U_\infty e^{i\alpha} \frac{a^2}{\zeta}
 $$
 
-to ensure that the cylinder surface $r = R$ remains a streamline.
+to ensure that the cylinder surface $r = a$ remains a streamline.
 
-To see this, put $\zeta = R e^{i\theta}$. Then
+To see this, put $\zeta = a e^{i\theta}$. Then
 
 $$
-W_U + W_D = U_\infty R \left( e^{i(\theta - \alpha)} + e^{-i(\theta - \alpha)} \right),
+W_U + W_D = U_\infty a \left( e^{i(\theta - \alpha)} + e^{-i(\theta - \alpha)} \right),
 $$
 
 so
 
 $$
-W_U + W_D = 2 U_\infty R \cos(\theta - \alpha),
+W_U + W_D = 2 U_\infty a \cos(\theta - \alpha),
 $$
 
-which is purely real on $r = R$. Therefore,
+which is purely real on $r = a$. Therefore,
 
 $$
 \psi = 0
@@ -222,7 +222,7 @@ on the cylinder surface, satisfying the impermeability condition.
 Differentiating gives
 
 $$
-\frac{dW}{d\zeta} = U_\infty \left( e^{-i\alpha} - e^{i\alpha} \frac{R^2}{\zeta^2} \right) - \frac{i\Gamma}{2\pi \zeta},
+\frac{dW}{d\zeta} = U_\infty \left( e^{-i\alpha} - e^{i\alpha} \frac{a^2}{\zeta^2} \right) - \frac{i\Gamma}{2\pi \zeta},
 $$
 
 and, using
@@ -233,7 +233,7 @@ $$
 
 this gives the velocity components.
 
-On the cylinder surface $r = R$, the radial velocity remains
+On the cylinder surface $r = a$, the radial velocity remains
 
 $$
 v_r = 0,
@@ -242,7 +242,7 @@ $$
 while the tangential velocity becomes
 
 $$
-v_\theta = -2 U_\infty \sin(\theta - \alpha) + \frac{\Gamma}{2\pi R}
+v_\theta = -2 U_\infty \sin(\theta - \alpha) + \frac{\Gamma}{2\pi a}
 $$
 
 for the circulation sign convention we're using.
@@ -342,7 +342,7 @@ Not yet. In the solution we've been developing, $\Gamma$ is an unspecified param
 For the complex potential,
 
 $$
-W(\zeta) = U_\infty\left(\zeta + \frac{R^2}{\zeta}\right) - \frac{i\Gamma}{2\pi} \log \zeta,
+W(\zeta) = U_\infty\left(\zeta + \frac{a^2}{\zeta}\right) - \frac{i\Gamma}{2\pi} \log \zeta,
 $$
 
 $\Gamma$ is defined by
@@ -369,7 +369,7 @@ For example, $\Gamma = 10 \, \text{m}^2/\text{s}$. Then we simply use that value
 If the cylinder has angular velocity $\Omega$, its rotation can generate circulation. For an ideal rotating cylinder, a common relation is
 
 $$
-\Gamma = 2\pi R^2 \Omega,
+\Gamma = 2\pi a^2 \Omega,
 $$
 
 with the sign depending on the convention for positive rotation.
@@ -392,7 +392,7 @@ as a parameter.
 Then the surface velocity is
 
 $$
-v_\theta = -2U_\infty\sin\theta + \frac{\Gamma}{2\pi R},
+v_\theta = -2U_\infty\sin\theta + \frac{\Gamma}{2\pi a},
 $$
 
 and the lift per unit length becomes
@@ -413,15 +413,15 @@ The cleanest way to understand $\Gamma = 2\pi a^2 \Omega$ is to start from the d
 
 ##### A. Rotating cylinder
 
-Suppose a cylinder has radius $R$ and rotates with angular velocity $\Omega$.
+Suppose a cylinder has radius $a$ and rotates with angular velocity $\Omega$.
 
 The tangential speed of its surface is
 
 $$
-V_\theta = R\Omega.
+V_\theta = a\Omega.
 $$
 
-This is simply the familiar relation $v = r\Omega$ evaluated at $r = R$.
+This is simply the familiar relation $v = r\Omega$ evaluated at $r = a$.
 
 ##### B. Calculate the circulation
 
