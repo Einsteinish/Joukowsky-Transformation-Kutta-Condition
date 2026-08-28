@@ -755,7 +755,7 @@ By applying the **Kutta Condition**, we set the counterclockwise circulation $\G
 Mathematically, this requires:
 
 $$
-\Gamma = 4 \pi a U_\infty \sin(\alpha + \beta)
+\Gamma = - 4 \pi a U_\infty \sin(\alpha + \beta)
 $$
 
 (where $\beta$ is the angle associated with the camber shift of the cylinder's center)
@@ -767,21 +767,21 @@ When this specific clockwise circulation $\Gamma$ is applied:
 - The calculated lift matches real‑world experimental data remarkably well for attached flows.
 
 
-#### 2.4.1 Circulation for Joukowski Airfoil: Derivation of $\Gamma = 4\pi a U_\infty \sin(\alpha + \beta)$
+#### 2.4.1 Circulation for Joukowski Airfoil: Derivation of $\Gamma = - 4\pi a U_\infty \sin(\alpha + \beta)$
 
 This section explains the derivation of the circulation $\Gamma$ required to satisfy the Kutta condition for a Joukowski airfoil. The result is fundamental in potential flow theory and shows how camber and angle of attack generate lift.
 
 ##### A. Surface Velocity on the Cylinder
 
-Consider a cylinder of radius $R$ in the $\zeta$-plane, with its center at the origin. The complex potential for uniform flow at an angle of attack $\alpha$, plus a clockwise circulation $\Gamma > 0$, yields the tangential velocity $V_\theta$ on the cylinder surface ($\zeta = R e^{i\theta}$):
+Consider a cylinder of radius $R$ in the $\zeta$-plane, with its center at the origin. The complex potential for uniform flow at an angle of attack $\alpha$, plus a counterclockwise circulation $\Gamma > 0$, yields the tangential velocity $V_\theta$ on the cylinder surface ($\zeta = R e^{i\theta}$):
 
 $$
-V_\theta(\theta) = -2 U_\infty \sin(\theta - \alpha) - \frac{\Gamma}{2\pi a}
+V_\theta(\theta) = -2 U_\infty \sin(\theta - \alpha) + \frac{\Gamma}{2\pi a}
 $$
 
 - $\theta$: angle measured counter‑clockwise from the positive real axis.
 - $U_\infty$: freestream speed.
-- $\Gamma$: circulation (positive clockwise).
+- $\Gamma$: circulation (positive: counterclockwise).
 
 Check Appendix 2.4.2: Derivation of the Surface Velocity $V_\theta(\theta)$.
 
@@ -791,13 +791,13 @@ Check Appendix 2.4.2: Derivation of the Surface Velocity $V_\theta(\theta)$.
 At a stagnation point, the velocity vanishes, so $V_\theta = 0$:
 
 $$
--2 U_\infty \sin(\theta_{\text{stag}} - \alpha) - \frac{\Gamma}{2\pi a} = 0
+-2 U_\infty \sin(\theta_{\text{stag}} - \alpha) + \frac{\Gamma}{2\pi a} = 0
 $$
 
 Rearranging for $\Gamma$:
 
 $$
-\Gamma = -4 \pi a U_\infty \sin(\theta_{\text{stag}} - \alpha)
+\Gamma = 4 \pi a U_\infty \sin(\theta_{\text{stag}} - \alpha)
 $$
 
 Using $\sin(-x) = -\sin(x)$, we get:
