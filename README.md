@@ -530,7 +530,7 @@ For the idealized potential-flow model, however, this is a useful way to connect
 
 ## 2. Joukowsky Transformation
 
-This chapter explains the Joukowsky transformation and flow past a cylinder under the clockwise circulation convention.
+This chapter explains the Joukowsky transformation and flow past a cylinder under the counterclockwise circulation convention.
 
 ![Joukowsky Transform](images/Joukowsky_transform.png)  
 By Krishnavedala - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=38181984
@@ -538,7 +538,7 @@ By Krishnavedala - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index
 &nbsp;
 &nbsp;
 
-### 2.1 Complex Potential with Clockwise Circulation
+### 2.1 Complex Potential with Counterclockwise Circulation
 
 When modeling uniform flow past a cylinder of radius $R$ inclined at an angle of attack $\alpha$, the complex potential $W(\zeta)$ is written as:
 
@@ -548,8 +548,8 @@ $$
 
 Notice the minus sign before the logarithmic term:
 
-- **Minus sign ($-i\Gamma$):** Enforces clockwise circulation for $\Gamma > 0$.
-- **Velocity effect:** A clockwise vortex adds velocity to the upper surface of the cylinder (where the freestream flow goes left‑to‑right) and reduces velocity on the lower surface.
+- **Minus sign ($-i\Gamma$):** Enforces ### 2.1 Complex Potential with counterclockwise Circulation circulation for $\Gamma > 0$.
+- **Velocity effect:** A clockwise vortex (binding vortex) adds velocity to the upper surface of the cylinder (where the freestream flow goes left‑to‑right) and reduces velocity on the lower surface.
 - **Bernoulli's Principle:** Higher velocity on top yields lower static pressure; lower velocity on the bottom yields higher static pressure.
 
 ### 2.2 The Kutta‑Joukowsky Theorem and Upward Lift
@@ -565,7 +565,7 @@ Where:
 - $L$ = Lift force per unit span
 - $\rho_\infty$ = Fluid density
 - $V_\infty$ = Freestream velocity
-- $\Gamma$ = Clockwise circulation ($\Gamma > 0 \implies \text{Upward Lift}$)
+- $\Gamma$ = Counterclockwise circulation ($\Gamma < 0 \implies \text{Upward Lift}$)
 
 ### 2.3 Mapping the Cylinder to an Airfoil (Joukowsky Mapping)
 
@@ -750,7 +750,7 @@ Together, these parameters produce a cambered, moderately thick airfoil with the
 
 Without circulation ($\Gamma = 0$), the flow moves around the sharp trailing edge with infinite velocity, which is physically impossible in real fluids with even microscopic viscosity.
 
-By applying the **Kutta Condition**, we set the clockwise circulation $\Gamma$ to the exact value that forces the rear stagnation point on the cylinder to map directly onto $\zeta = c$.
+By applying the **Kutta Condition**, we set the counterclockwise circulation $\Gamma$ to the exact value that forces the rear stagnation point on the cylinder to map directly onto $\zeta = c$.
 
 Mathematically, this requires:
 
