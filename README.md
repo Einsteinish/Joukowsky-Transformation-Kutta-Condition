@@ -1011,12 +1011,157 @@ $$
 
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
 
-#### 2.4.3 Appendix - How to get the Surface Velocity (Method II)
+
+
+![Joukowsky mapping_2](images/v_theta.png)  
+
+[View the full Python script here →](Python/v_theta.py)  
+
+[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta.py)  
+
+
+#### 2.4.3 Appendix - The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
+
+The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the cylinder surface at each angle.
+
+##### 1. The Shape of the Curve
+
+- **Without circulation ($\Gamma = 0$):** The curve is a pure sine wave.
+  - $v_\theta = 0$ at the front ($\theta = \pi$) and rear ($\theta = 0$ or $\theta = 2\pi$) → stagnation points.
+  - Maximum speed occurs at the top ($\theta = \pi/2$) and bottom ($\theta = 3\pi/2$).
+  - The flow is **symmetric**: top and bottom speeds are equal in magnitude.
+  - **Net force = Zero** (no lift).
+
+- **With circulation ($\Gamma > 0$):** The entire sine wave is shifted upward by a constant $+\Gamma/(2\pi a)$.
+
+##### 2. What the Shift Does Physically
+
+- **Breaks the symmetry**: The top and bottom speeds are no longer equal. One side becomes faster, the other slower.
+- **Moves the stagnation points**: The front and rear stagnation points shift away from $\pi$ and $0$(moving downwards toward the lower surface). This tilts the flow pattern.
+- **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
+
+##### 3. Why It Generates Lift
+
+- Faster flow on one surface → **lower pressure** (Bernoulli's principle).
+- Slower flow on the opposite surface → **higher pressure**.
+- This pressure difference creates a net upward (or downward) force.
+- Mathematically, this force is exactly:
+
+$$
+L = \rho_\infty U_\infty \Gamma
+$$
+
+
+##### 💡 Bottom Line
+
+> The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).  
+  
+  
+#### 2.4.4 Pressure Coefficient $C_p$
+
+![cp_alpha00_beta52.png](images/cp_alpha00_beta52.png)  
+
+[View the full Python script here →](Python/cp_alpha00_beta52.py)  
+
+[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/cp_alpha00_beta52.py)  
+
+##### 2.4.4.1. Reading the Flow Along the Chord
+
+Let's walk from the leading edge to the trailing edge and see what the $C_p$ curve tells us about the flow.
+
+
+
+###### a) Leading Edge – Stagnation Point ($x \approx -2.03$)
+
+At the very nose of the airfoil, the flow comes to a complete stop.
+
+- Here, $V = 0$ → $C_p = 1$.
+- On our plot, look for the reddest points ($C_p \approx 1$) at the far left of the horizontal axis – they cluster around $x \approx -2.03$.
+
+
+
+###### b) Suction Peak – Acceleration Over the Nose (just downstream, $x \approx -1.5$ to $-1.0$)
+
+Immediately after the stagnation point, the flow must rapidly curve around the airfoil's nose. This curvature forces the flow to accelerate dramatically – especially on the upper surface, which is more convex.
+
+- The velocity jumps above $U_\infty$ → $C_p$ becomes **negative**.
+- The lowest $C_p$ (darkest blue, e.g., $-2$ to $-4$) marks the **suction peak** – the region of highest local speed and lowest pressure.
+- In our scatter plot, you'll see a sharp plunge from red (stagnation) into dark blue just to the right of the leading edge. This rapid drop is the signature of a well‑designed aerodynamic shape.
+
+ 
+
+###### c) Mid‑Chord – Sustained Pressure Difference ($x \approx -0.5$ to $1.0$)
+
+As the flow moves further back, the upper‑surface suction remains stronger (more negative, bluer) than the lower‑surface pressure (less negative, greener/yellowish).
+
+This asymmetry is crucial:
+
+> Low pressure on top + higher pressure on bottom = net upward force (**lift**).
+
+Even though $\alpha = 0^\circ$, our airfoil has camber ($y_0 = 0.1$, $\beta \approx 5.2^\circ$), so the Kutta condition forces a non‑zero circulation $\Gamma$, which creates this asymmetric distribution.
+
+ 
+
+###### d) Pressure Recovery – Flow Slows Down ($x \approx 1.0$ to $1.9$)
+
+As the flow approaches the trailing edge, it must slow down to meet the freestream conditions again.
+
+- The pressure rises (i.e., $C_p$ becomes less negative), so the points move from blue back toward $C_p = 0$ (white/yellow) and occasionally slightly positive (red).
+- This is called **pressure recovery** – a smooth rise in pressure that avoids flow separation.
+
+ 
+
+###### e) Trailing Edge – Kutta Condition Satisfied ($x = 2.0$)
+
+At the sharp trailing edge, the Kutta condition requires that the flow leaves smoothly, meaning the pressures from the upper and lower surfaces must meet exactly at the same value.
+
+In our plot, you should see that the colours (and the vertical positions) of the upper and lower surface points become almost identical near $x = 2.0$. This confirms that:
+
+- The circulation $\Gamma$ is correctly chosen,
+- The flow exits without a discontinuity.
+
+ 
+
+##### 2.4.4.2 🎨 What Does the Colour Tell You at a Glance?
+
+| Colour | $C_p$ Range | Meaning |
+| :--- | :--- | :--- |
+| **Deep Blue** | Most negative | Strong suction – look for the suction peak |
+| **Light Blue / Green** | Moderately negative | Typical of the lower surface or the rear part of the upper surface |
+| **Yellow / White** | $\approx 0$ | Local speed equals freestream |
+| **Red / Orange** | Positive | High pressure – stagnation regions, mostly at the leading edge |
+
+The colour map makes it extremely easy to spot the location of the suction peak without reading the vertical axis too carefully.
+
+---
+
+##### 2.4.4.3 📊 How to Judge Aerodynamic Performance from This Plot
+
+1. **Deeper suction peak** (more negative $C_p$) means higher local velocity → larger pressure difference → more lift.  
+   But if the peak is too sharp, it may cause premature flow separation (stall) at higher angles.
+
+2. If the upper and lower curves were perfectly symmetric (same colours at each $x$), there would be no net pressure difference → zero lift.  
+   (This would be a symmetric airfoil at $\alpha = 0^\circ$.)
+
+3. The **location of the suction peak** tells you about the loading distribution.  
+   A peak that is very far forward (close to the nose) indicates a highly cambered or high‑lift configuration.
+
+##### 2.4.4.4 🛩️ The Current Case
+
+- $\alpha = 0^\circ$, $\beta \approx 5.2^\circ$ → effective angle of attack $= 5.2^\circ$.
+- The suction peak is healthy,
+- The pressure recovery is smooth,
+- The trailing‑edge pressures match.
+
+All signs of a **well‑behaved, lifting airfoil**.
+
+
+#### 2.4.5 Appendix - How to get the Surface Velocity (Method II)
 Derivation of Tangential Velocity $v_\theta$ and the Kutta Condition in the Joukowski Transformation.
 You will see a step-by-step derivation of the tangential velocity distribution on the surface of a cylinder under potential flow with circulation. It demonstrates the exact mathematical step where the strength of the bound vortex $\Gamma$ is uniquely fixed by the **Kutta condition**.
 
 
-##### 2.4.3.1 Starting Point: Potential Flow Around a Cylinder
+##### 2.4.5.1 Starting Point: Potential Flow Around a Cylinder
 
 The Joukowski transformation maps a circle in the $\zeta$-plane to an airfoil shape in the $z$-plane. First, we solve for the flow field around the circle in the $\zeta$-plane.
 
@@ -1069,7 +1214,7 @@ $$
 $$
 
 
-##### 2.4.3.2  Velocity Components in Polar Coordinates
+##### 2.4.5.2  Velocity Components in Polar Coordinates
 
 In polar coordinates, the velocity components are derived from the stream function as:
 
@@ -1085,7 +1230,7 @@ $$
 
  
 
-##### 2.4.3.3 Evaluation at the Cylinder Surface ($r = a$)
+##### 2.4.5.3 Evaluation at the Cylinder Surface ($r = a$)
 
 Substituting $r = a$ gives:
 
@@ -1105,7 +1250,7 @@ $$
 
  
 
-##### 2.4.3.4 Applying the Kutta Condition: Determining the Unique Value of \( \Gamma \)
+##### 2.4.5.4 Applying the Kutta Condition: Determining the Unique Value of \( \Gamma \)
 
 Let $\theta = \theta_{TE}$ be the point on the circle corresponding to the trailing edge in the Joukowski transformation (typically $\theta_{TE} = 0$ or $\pi$ for a standard symmetric circle).
 
@@ -1131,7 +1276,7 @@ $$
 
  
 
-##### 2.4.3.5 Quantitative Velocity Distribution ($v_\theta$) on a Cylinder Surface with Circulation
+##### 2.4.5.5 Quantitative Velocity Distribution ($v_\theta$) on a Cylinder Surface with Circulation
 
 This section extends the previous derivation of the Kutta condition by explicitly calculating the tangential velocities on the top and bottom surfaces of a cylinder. It provides the exact mathematical proof that the bound vortex accelerates the flow on the upper surface while decelerating it on the lower surface.
 
@@ -1252,147 +1397,3 @@ The pressure difference $\Delta P = P_{\text{bottom}} - P_{\text{top}}$ can be q
 
 
 
-
-
-
-![Joukowsky mapping_2](images/v_theta.png)  
-
-[View the full Python script here →](Python/v_theta.py)  
-
-[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta.py)  
-
-
-#### 2.4.4 Appendix - The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
-
-The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the cylinder surface at each angle.
-
-##### 1. The Shape of the Curve
-
-- **Without circulation ($\Gamma = 0$):** The curve is a pure sine wave.
-  - $v_\theta = 0$ at the front ($\theta = \pi$) and rear ($\theta = 0$ or $\theta = 2\pi$) → stagnation points.
-  - Maximum speed occurs at the top ($\theta = \pi/2$) and bottom ($\theta = 3\pi/2$).
-  - The flow is **symmetric**: top and bottom speeds are equal in magnitude.
-  - **Net force = Zero** (no lift).
-
-- **With circulation ($\Gamma > 0$):** The entire sine wave is shifted upward by a constant $+\Gamma/(2\pi a)$.
-
-##### 2. What the Shift Does Physically
-
-- **Breaks the symmetry**: The top and bottom speeds are no longer equal. One side becomes faster, the other slower.
-- **Moves the stagnation points**: The front and rear stagnation points shift away from $\pi$ and $0$(moving downwards toward the lower surface). This tilts the flow pattern.
-- **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
-
-##### 3. Why It Generates Lift
-
-- Faster flow on one surface → **lower pressure** (Bernoulli's principle).
-- Slower flow on the opposite surface → **higher pressure**.
-- This pressure difference creates a net upward (or downward) force.
-- Mathematically, this force is exactly:
-
-$$
-L = \rho_\infty U_\infty \Gamma
-$$
-
-
-##### 💡 Bottom Line
-
-> The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).  
-  
-  
-#### 2.4.5 Pressure Coefficient $C_p$
-
-![cp_alpha00_beta52.png](images/cp_alpha00_beta52.png)  
-
-[View the full Python script here →](Python/cp_alpha00_beta52.py)  
-
-[Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/cp_alpha00_beta52.py)  
-
-##### 2.4.5.1. Reading the Flow Along the Chord
-
-Let's walk from the leading edge to the trailing edge and see what the $C_p$ curve tells us about the flow.
-
-
-
-###### a) Leading Edge – Stagnation Point ($x \approx -2.03$)
-
-At the very nose of the airfoil, the flow comes to a complete stop.
-
-- Here, $V = 0$ → $C_p = 1$.
-- On our plot, look for the reddest points ($C_p \approx 1$) at the far left of the horizontal axis – they cluster around $x \approx -2.03$.
-
-
-
-###### b) Suction Peak – Acceleration Over the Nose (just downstream, $x \approx -1.5$ to $-1.0$)
-
-Immediately after the stagnation point, the flow must rapidly curve around the airfoil's nose. This curvature forces the flow to accelerate dramatically – especially on the upper surface, which is more convex.
-
-- The velocity jumps above $U_\infty$ → $C_p$ becomes **negative**.
-- The lowest $C_p$ (darkest blue, e.g., $-2$ to $-4$) marks the **suction peak** – the region of highest local speed and lowest pressure.
-- In our scatter plot, you'll see a sharp plunge from red (stagnation) into dark blue just to the right of the leading edge. This rapid drop is the signature of a well‑designed aerodynamic shape.
-
- 
-
-###### c) Mid‑Chord – Sustained Pressure Difference ($x \approx -0.5$ to $1.0$)
-
-As the flow moves further back, the upper‑surface suction remains stronger (more negative, bluer) than the lower‑surface pressure (less negative, greener/yellowish).
-
-This asymmetry is crucial:
-
-> Low pressure on top + higher pressure on bottom = net upward force (**lift**).
-
-Even though $\alpha = 0^\circ$, our airfoil has camber ($y_0 = 0.1$, $\beta \approx 5.2^\circ$), so the Kutta condition forces a non‑zero circulation $\Gamma$, which creates this asymmetric distribution.
-
- 
-
-###### d) Pressure Recovery – Flow Slows Down ($x \approx 1.0$ to $1.9$)
-
-As the flow approaches the trailing edge, it must slow down to meet the freestream conditions again.
-
-- The pressure rises (i.e., $C_p$ becomes less negative), so the points move from blue back toward $C_p = 0$ (white/yellow) and occasionally slightly positive (red).
-- This is called **pressure recovery** – a smooth rise in pressure that avoids flow separation.
-
- 
-
-###### e) Trailing Edge – Kutta Condition Satisfied ($x = 2.0$)
-
-At the sharp trailing edge, the Kutta condition requires that the flow leaves smoothly, meaning the pressures from the upper and lower surfaces must meet exactly at the same value.
-
-In our plot, you should see that the colours (and the vertical positions) of the upper and lower surface points become almost identical near $x = 2.0$. This confirms that:
-
-- The circulation $\Gamma$ is correctly chosen,
-- The flow exits without a discontinuity.
-
- 
-
-##### 2.4.5.2 🎨 What Does the Colour Tell You at a Glance?
-
-| Colour | $C_p$ Range | Meaning |
-| :--- | :--- | :--- |
-| **Deep Blue** | Most negative | Strong suction – look for the suction peak |
-| **Light Blue / Green** | Moderately negative | Typical of the lower surface or the rear part of the upper surface |
-| **Yellow / White** | $\approx 0$ | Local speed equals freestream |
-| **Red / Orange** | Positive | High pressure – stagnation regions, mostly at the leading edge |
-
-The colour map makes it extremely easy to spot the location of the suction peak without reading the vertical axis too carefully.
-
----
-
-##### 2.4.5.3 📊 How to Judge Aerodynamic Performance from This Plot
-
-1. **Deeper suction peak** (more negative $C_p$) means higher local velocity → larger pressure difference → more lift.  
-   But if the peak is too sharp, it may cause premature flow separation (stall) at higher angles.
-
-2. If the upper and lower curves were perfectly symmetric (same colours at each $x$), there would be no net pressure difference → zero lift.  
-   (This would be a symmetric airfoil at $\alpha = 0^\circ$.)
-
-3. The **location of the suction peak** tells you about the loading distribution.  
-   A peak that is very far forward (close to the nose) indicates a highly cambered or high‑lift configuration.
-
-##### 2.4.5.4 🛩️ The Current Case
-
-- $\alpha = 0^\circ$, $\beta \approx 5.2^\circ$ → effective angle of attack $= 5.2^\circ$.
-- The suction peak is healthy,
-- The pressure recovery is smooth,
-- The trailing‑edge pressures match.
-
-All signs of a **well‑behaved, lifting airfoil**.
