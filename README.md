@@ -1114,19 +1114,19 @@ Let $\theta = \theta_{TE}$ be the point on the circle corresponding to the trail
 Set $v_\theta$ to zero at $\theta = \theta_{TE}$:
 
 $$
-v_\theta\Big\vert{}_{\theta=\theta_{TE}} = 0 \;\Rightarrow\; -2U_\infty\sin(\theta_{TE}-\alpha) + \frac{\Gamma}{2\pi a} = 0
+v_\theta\Big\vert{}_{\theta=\theta_{TE}} = 0 \Rightarrow -2U_\infty\sin(\theta_{TE}-\alpha) + \frac{\Gamma}{2\pi a} = 0
 $$
 
 Solving for $\Gamma$:
 
 $$
-\Gamma = 4\pi a\, U_\infty \sin(\theta_{TE}-\alpha)
+\Gamma = 4\pi a U_\infty \sin(\theta_{TE}-\alpha)
 $$
 
 For a standard symmetric circle where the trailing edge corresponds to $\theta_{TE} = 0$, this simplifies to:
 
 $$
-\boxed{\Gamma = -4\pi a\, U_\infty \sin\alpha}
+\boxed{\Gamma = -4\pi a U_\infty \sin\alpha}
 $$
 
  
