@@ -1012,29 +1012,29 @@ $$
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
 
 #### 2.4.3 Appendix - How to get the Surface Velocity (II)
-Derivation of Tangential Velocity \( v_\theta \) and the Kutta Condition in the Joukowski Transformation.
-You will see a step-by-step derivation of the tangential velocity distribution on the surface of a cylinder under potential flow with circulation. It demonstrates the exact mathematical step where the strength of the bound vortex \( \Gamma \) is uniquely fixed by the **Kutta condition**.
+Derivation of Tangential Velocity $v_\theta$ and the Kutta Condition in the Joukowski Transformation.
+You will see a step-by-step derivation of the tangential velocity distribution on the surface of a cylinder under potential flow with circulation. It demonstrates the exact mathematical step where the strength of the bound vortex $\Gamma$ is uniquely fixed by the **Kutta condition**.
 
 
 ##### 2.4.3.1 Starting Point: Potential Flow Around a Cylinder
 
-The Joukowski transformation maps a circle in the \( \zeta \)-plane to an airfoil shape in the \( z \)-plane. First, we solve for the flow field around the circle in the \( \zeta \)-plane.
+The Joukowski transformation maps a circle in the $\zeta$-plane to an airfoil shape in the $z$-plane. First, we solve for the flow field around the circle in the $\zeta$-plane.
 
-For a cylinder of radius \( a \), subject to a uniform flow \( U_\infty \) (at an angle of attack \( \alpha \)) and a circulation \( \Gamma \), the complex potential \( w(\zeta) \) is given by:
-
-$$
-w(\zeta) = U_\infty\left(\zeta e^{-i\alpha} + \frac{a^2 e^{i\alpha}}{\zeta}\right) - \frac{i\Gamma}{2\pi}\ln \zeta
-$$
-
-##### A. Stream Function \( \psi(r, \theta) \)
-
-By definition, the complex potential relates to the velocity potential \( \phi \) and the stream function \( \psi \) as:
+For a cylinder of radius $a$, subject to a uniform flow $U_\infty$ (at an angle of attack $\alpha$) and a circulation $\Gamma$, the complex potential $W(\zeta)$ is given by:
 
 $$
-w(\zeta) = \phi + i\psi
+W(\zeta) = U_\infty\left(\zeta e^{-i\alpha} + \frac{a^2 e^{i\alpha}}{\zeta}\right) - \frac{i\Gamma}{2\pi}\ln \zeta
 $$
 
-Substituting \( \zeta = r e^{i\theta} \):
+##### A. Stream Function $psi(r, \theta)$
+
+By definition, the complex potential relates to the velocity potential $\phi$ and the stream function $\psi$ as:
+
+$$
+W(\zeta) = \phi + i\psi
+$$
+
+Substituting $\zeta = r e^{i\theta}$:
 
 **Uniform flow terms**:
 
@@ -1059,10 +1059,10 @@ $$
 **Combine real and imaginary parts**:
 
 $$
-w(\zeta) = \underbrace{\left[ U_\infty \left( r + \frac{a^2}{r} \right) \cos(\theta - \alpha) + \frac{\Gamma \theta}{2\pi} \right]}_{\phi(r,\theta) \text{ (Velocity Potential)}} + i \underbrace{\left[ U_\infty \left( r - \frac{a^2}{r} \right) \sin(\theta - \alpha) - \frac{\Gamma}{2\pi} \ln r \right]}_{\psi(r,\theta) \text{ (Stream Function)}}
+W(\zeta) = \underbrace{\left[ U_\infty \left( r + \frac{a^2}{r} \right) \cos(\theta - \alpha) + \frac{\Gamma \theta}{2\pi} \right]}_{\phi(r,\theta) \text{ (Velocity Potential)}} + i \underbrace{\left[ U_\infty \left( r - \frac{a^2}{r} \right) \sin(\theta - \alpha) - \frac{\Gamma}{2\pi} \ln r \right]}_{\psi(r,\theta) \text{ (Stream Function)}}
 $$
 
-Taking the imaginary part \( \text{Im}\{w(\zeta)\} \) yields the stream function:
+Taking the imaginary part $\text{Im}\{w(\zeta)\}$ yields the stream function:
 
 $$
 \boxed{\psi(r,\theta) = U_\infty\left(r - \frac{a^2}{r}\right)\sin(\theta-\alpha) - \frac{\Gamma}{2\pi}\ln r}
@@ -1077,7 +1077,7 @@ $$
 v_r = \frac{1}{r}\frac{\partial \psi}{\partial \theta}, \qquad v_\theta = -\frac{\partial \psi}{\partial r}
 $$
 
-Differentiating \( \psi \) with respect to \( r \):
+Differentiating $\psi$ with respect to $r$:
 
 $$
 v_\theta = -\left[U_\infty\left(1+\frac{a^2}{r^2}\right)\sin(\theta-\alpha)\right] + \frac{\Gamma}{2\pi r}
@@ -1085,11 +1085,11 @@ $$
 
  
 
-##### 2.4.3.3 Evaluation at the Cylinder Surface (\( r = a \))
+##### 2.4.3.3 Evaluation at the Cylinder Surface ($r = a$)
 
-Substituting \( r = a \) gives:
+Substituting $r = a$ gives:
 
-- **Radial velocity**: \( v_r = 0 \) (no flow through the solid surface, boundary condition satisfied).
+- **Radial velocity**: $v_r = 0$ (no flow through the solid surface, boundary condition satisfied).
 - **Tangential velocity**:
 
 $$
@@ -1100,30 +1100,30 @@ $$
 
 | Term | Source | Description |
 | :--- | :--- | :--- |
-| \( -2U_\infty\sin(\theta-\alpha) \) | Uniform flow | Symmetric surface velocity distribution with no circulation (\( \Gamma = 0 \)). |
-| \( \frac{\Gamma}{2\pi a} \) | Circulation | Rotational component added uniformly across the entire surface. |
+| $-2U_\infty\sin(\theta-\alpha)$ | Uniform flow | Symmetric surface velocity distribution with no circulation ($\Gamma = 0$). |
+| $\frac{\Gamma}{2\pi a}$ | Circulation | Rotational component added uniformly across the entire surface. |
 
  
 
 ##### 2.4.3.4 Applying the Kutta Condition: Determining the Unique Value of \( \Gamma \)
 
-Let \( \theta = \theta_{TE} \) be the point on the circle corresponding to the trailing edge in the Joukowski transformation (typically \( \theta_{TE} = 0 \) or \( \pi \) for a standard symmetric circle).
+Let $\theta = \theta_{TE}$ be the point on the circle corresponding to the trailing edge in the Joukowski transformation (typically $\theta_{TE} = 0$ or $\pi$ for a standard symmetric circle).
 
 > **Kutta Condition**: The tangential velocity at the trailing edge must be zero to prevent an infinite velocity at the sharp edge and ensure smooth flow exit.
 
-Set \( v_\theta \) to zero at \( \theta = \theta_{TE} \):
+Set $v_\theta$ to zero at $\theta = \theta_{TE}$:
 
 $$
 v_\theta\Big\vert{}_{\theta=\theta_{TE}} = 0 \;\Rightarrow\; -2U_\infty\sin(\theta_{TE}-\alpha) + \frac{\Gamma}{2\pi a} = 0
 $$
 
-Solving for \( \Gamma \):
+Solving for $\Gamma$:
 
 $$
 \Gamma = 4\pi a\, U_\infty \sin(\theta_{TE}-\alpha)
 $$
 
-For a standard symmetric circle where the trailing edge corresponds to \( \theta_{TE} = 0 \), this simplifies to:
+For a standard symmetric circle where the trailing edge corresponds to $\theta_{TE} = 0$, this simplifies to:
 
 $$
 \boxed{\Gamma = -4\pi a\, U_\infty \sin\alpha}
@@ -1133,10 +1133,10 @@ $$
 
 ##### 2.4.3.5 Summary and Physical Interpretation
 
-The derived value of \( \Gamma \) is the **unique circulation value fixed by the Kutta condition**.
+The derived value of $\Gamma$ is the **unique circulation value fixed by the Kutta condition**.
 
-- **Invariance of Circulation**: Because circulation is preserved during conformal mapping, this cylinder-calculated \( \Gamma \) is identical to the circulation around the actual Joukowski airfoil.
-- **Lift Calculation**: Substituting this \( \Gamma \) into the **Kutta-Joukowski theorem** yields the lift force:
+- **Invariance of Circulation**: Because circulation is preserved during conformal mapping, this cylinder-calculated $\Gamma$ is identical to the circulation around the actual Joukowski airfoil.
+- **Lift Calculation**: Substituting this $\Gamma$ into the **Kutta-Joukowski theorem** yields the lift force:
 
 $$
 \boxed{L = \rho_\infty U_\infty \Gamma}
