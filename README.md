@@ -80,7 +80,7 @@ $$
 v_r = 0
 $$
 
-on $r = R$, as required by the impermeability condition.
+on $r = a$, as required by the impermeability condition.
 
 The tangential velocity is:
 
