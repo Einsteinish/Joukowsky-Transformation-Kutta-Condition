@@ -1006,7 +1006,7 @@ $$
 This matches the classic result: if you set $\alpha = 0$ and $R = a$, you recover the familiar formula:
 
 $$
-v_\theta = -2U \sin\theta + \frac{\Gamma}{2\pi a}
+v_\theta = -2U_\infty \sin\theta + \frac{\Gamma}{2\pi a}
 $$
 
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
