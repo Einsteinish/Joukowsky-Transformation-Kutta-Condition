@@ -1023,7 +1023,7 @@ $$
 | Variable | Symbol | Description |
 | :--- | :--- | :--- |
 | **Circulation** | $\Gamma_{\text{Kutta}}$ | The bound circulation required to satisfy the Kutta condition. |
-| **Radius** | $R$ | Radius of the shifted circle in the $Z$-plane. |
+| **Radius** | $a$ | Radius of the shifted circle in the $\zeta$-plane. |
 | **Free-stream Velocity** | $U_{\infty}$ | The magnitude of the undisturbed oncoming flow. |
 | **Trailing Edge Angle** | $\theta_{TE}$ | The angular coordinate of the point on the original circle that maps to the trailing edge of the airfoil (where $\zeta = c$). |
 | **Angle of Attack** | $\alpha$ | The angle between the free-stream velocity vector and the chord line. |
