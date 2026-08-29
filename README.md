@@ -1528,3 +1528,91 @@ This is where Kelvin's Circulation Theorem comes in. Strictly speaking, this the
 
 However, inviscid theory alone cannot uniquely determine the strength (Γ) of this bound vortex. This is because the potential flow equations themselves mathematically admit infinitely many valid solutions regardless of how much circulation is imposed around the wing. It is viscosity that resolves this indeterminacy. Due to viscosity, real air cannot wrap around the sharp trailing edge and must separate smoothly at that point — this physical requirement is the Kutta condition. Interestingly, once steady state is reached, this condition is treated as if it were a boundary condition imposed within the inviscid calculation itself, uniquely fixing the magnitude of Γ. In other words, while the physical cause that determines Γ is viscosity, once it is determined, the lift calculation itself can be carried out using inviscid theory (potential flow).  
 The circulation determined this way forms a strong bound vortex around the wing, accelerating the air above the wing and decelerating the air below it. By Bernoulli's principle, this velocity difference leads to a pressure difference — low pressure above, high pressure below — and integrating this pressure difference over the entire wing surface gives the Lift. This same phenomenon can also be viewed from the perspective of momentum conservation: the wing receiving an upward force through the pressure difference is exactly equivalent to the wing continuously pushing the surrounding air downward, imparting downward momentum to it, and the reaction to this is precisely the lift acting on the wing. In other words, "pressure difference → pushing air down → reaction as lift" is not a sequence of causal steps, but rather two simultaneous descriptions — from the pressure perspective and the momentum perspective — of the same physical force.
+
+---
+
+## 4. Joukowski Airfoil Theory with 6 Equations
+
+This document walks through the key mathematical steps that transform a simple circle into a lifting airfoil, from the geometry mapping all the way to the final lift equation.
+
+### 4.1 The Joukowski Map (Geometry)
+> *"Turning a circle into an airfoil with a single stroke."*
+
+$$
+z = \zeta + \frac{c^2}{\zeta}
+$$
+
+**Why it's elegant:** It maps a simple circle in the $\zeta$-plane into a sharp-edged airfoil in the $z$-plane. The entire infinite family of airfoil shapes (thickness, camber) is controlled solely by the position of the circle's center. One equation, infinite shapes.
+
+---
+
+### 4.2 The Generalized Complex Potential (Unifier)
+> *"The sum of uniform flow, a doublet, and a vortex—all in one line."*
+
+$$
+w(\zeta) = U_\infty \left( \zeta e^{-i\alpha} + \frac{R^2 e^{i\alpha}}{\zeta} \right) - \frac{i\Gamma}{2\pi} \ln \zeta
+$$
+
+**Why it's elegant:** This single complex equation contains the entire inviscid flow field. Take its real part to get the velocity potential, or its imaginary part to get the streamlines. It's the Swiss Army knife of potential flow.
+
+---
+
+### 4.3 The Kutta Condition (The Decider)
+> *"Removing the infinite by demanding smoothness at the trailing edge."*
+
+For a shifted circle (with center at $(x_0, y_0)$) generating a camber angle $\beta$:
+
+$$
+\Gamma = 4\pi R \, U_\infty \sin(\theta_{TE} - \alpha)
+$$
+
+or equivalently, defining $\theta_{TE} = -\beta$ (for upward camber):
+
+$$
+\Gamma = -4\pi R \, U_\infty \sin(\alpha + \beta)
+$$
+
+**Why it's elegant:** This equation resolves the infinite ambiguity of circulation in potential theory. Instead of an arbitrary vortex strength, geometry ($\beta$) and angle of attack ($\alpha$) uniquely dictate $\Gamma$ to enforce zero velocity at the sharp edge. One condition fixes everything.
+
+---
+
+### 4.4 The Surface Tangential Velocity (The Insight)
+> *"The combination of angle and circulation."*
+
+Once the Kutta-consistent $\Gamma$ is substituted, the velocity on the cylinder surface condenses to this beautifully compact form:
+
+$$
+v_\theta(\theta) = -2 U_\infty \left[ \sin(\theta - \alpha) + \sin(\theta_{TE} - \alpha) \right]
+$$
+
+**Why it's elegant:** Notice how the circulation term ($\Gamma / 2\pi R$) is completely replaced by the geometry term $2 U_\infty \sin(\theta_{TE} - \alpha)$. The velocity distribution depends solely on two angles: the point on the cylinder ($\theta$) and the trailing edge location ($\theta_{TE}$). No more constants like $\Gamma$ cluttering the equation.
+
+---
+
+### 4.5 The Top/Bottom Speed Difference (The Heart of Lift)
+> *"Why one side is faster than the other."*
+
+Evaluating the above at $\theta = \pi/2$ (top) and $\theta = -\pi/2$ (bottom) yields the most physically intuitive equation:
+
+$$
+|v_{\text{top}}| - |v_{\text{bottom}}| = 4 U_\infty \sin(\alpha + \beta)
+$$
+
+**Why it's elegant:** It is shockingly simple. The velocity difference is purely a function of the effective angle of attack ($\alpha + \beta$). If the effective angle is zero, the speeds are equal (no lift). If it's positive, the top is faster by exactly $4 U_\infty \sin(\alpha + \beta)$. This directly connects geometry to the physics of Bernoulli.
+
+---
+
+### 4.6 The Kutta-Joukowski Theorem (The Final Result)
+> *"Lift, in its simplest form."*
+
+$$
+L = \rho_\infty U_\infty \Gamma
+$$
+
+Substitute the Kutta condition ($\Gamma = -4\pi R \, U_\infty \sin(\alpha + \beta)$) to get the explicit lift:
+
+$$
+L = -4\pi \rho_\infty U_\infty^2 R \sin(\alpha + \beta)
+$$
+
+**Why it's elegant:** This single line bypasses all the messy surface pressure integrations. It states that lift is entirely determined by the circulation fixed at the trailing edge. No viscosity, no pressure coefficients—just density, velocity, geometry, and angle of attack. This is one of the most celebrated equations in classical aerodynamics.
