@@ -1015,7 +1015,7 @@ To ensure that the flow leaves the trailing edge smoothly (without infinite velo
 The required circulation is given by:
 
 $$
-\Gamma_{\text{Kutta}} = 4\pi R \, U_{\infty} \sin(\theta_{TE} - \alpha)
+\Gamma_{\text{Kutta}} = 4\pi a U_{\infty} \sin(\theta_{TE} - \alpha)
 $$
 
 **Parameter Definitions**
