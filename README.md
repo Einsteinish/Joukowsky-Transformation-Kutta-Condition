@@ -1618,7 +1618,7 @@ $$
 to get the explicit lift:
 
 $$
-L = -4\pi \rho_\infty U_\infty^2 R \sin(\alpha + \beta)
+L = -4\pi \rho_\infty U_\infty^2 a \sin(\alpha + \beta)
 $$
 
 **What it does:** This single line bypasses all the messy surface pressure integrations. It states that lift is entirely determined by the circulation fixed at the trailing edge. No viscosity, no pressure coefficients—just density, velocity, geometry, and angle of attack. This is one of the most celebrated equations in classical aerodynamics.
