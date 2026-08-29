@@ -1518,6 +1518,7 @@ The pressure difference $\Delta P = P_{\text{bottom}} - P_{\text{top}}$ can be q
 
 ### 3.1 Short Answer
 Inviscid theory alone cannot determine the circulation value (Γ), but due to the viscosity of real air, the Kutta condition is enforced at the trailing edge, and as a result, a unique circulation value is determined. The circulation determined this way forms a Bound Vortex around the wing, accelerating the air above and decelerating the air below. This velocity difference leads to a pressure difference via Bernoulli's principle, and integrating this pressure difference over the entire wing surface gives the Lift. Viewed from the momentum perspective, the wing receiving an upward force through the pressure difference and the wing continuously imparting downward momentum to the surrounding air are ultimately the same phenomenon.  
+![Flow_deflected_down](images/Flow_deflected_down.png) 
   
 ### 3.2 Long Answer
 When an aircraft starts accelerating from rest, air cannot smoothly separate at the sharp trailing edge, so a Starting Vortex is generated and left behind in the wake.  
