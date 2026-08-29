@@ -1609,7 +1609,7 @@ $$
 L = \rho_\infty U_\infty \Gamma
 $$
 
-Substitute the Kutta condition ($\Gamma = -4\pi R \, U_\infty \sin(\alpha + \beta)$) to get the explicit lift:
+Substitute the Kutta condition ($\Gamma = -4\pi a U_{\infty} \sin(\alpha + \beta)$) to get the explicit lift:
 
 $$
 L = -4\pi \rho_\infty U_\infty^2 R \sin(\alpha + \beta)
