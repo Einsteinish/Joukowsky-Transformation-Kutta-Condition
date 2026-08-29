@@ -1006,8 +1006,28 @@ $$
 This matches the classic result: if you set $\alpha = 0$ and $R = a$, you recover the familiar formula:
 
 $$
-v_\theta = -2U_\infty \sin\theta + \frac{\Gamma}{2\pi a}
+v_\theta = -2U_\infty \sin\theta + \frac{\Gamma_{\text{Kutta}}}{2\pi a}
 $$
+
+
+Note that it uses the circulation required to satisfy the **Kutta condition** (i.e., smooth flow leaving the trailing edge) when applying the **Joukowski transformation** to a shifted cylinder.  
+To ensure that the flow leaves the trailing edge smoothly (without infinite velocity), a specific amount of circulation ($\Gamma$) must be added to the flow around the original cylinder.  
+The required circulation is given by:
+
+$$
+\Gamma_{\text{Kutta}} = 4\pi R \, U_{\infty} \sin(\theta_{TE} - \alpha)
+$$
+
+**Parameter Definitions**
+
+| Variable | Symbol | Description |
+| :--- | :--- | :--- |
+| **Circulation** | $\Gamma_{\text{Kutta}}$ | The bound circulation required to satisfy the Kutta condition. |
+| **Radius** | $R$ | Radius of the shifted circle in the $Z$-plane. |
+| **Free-stream Velocity** | $U_{\infty}$ | The magnitude of the undisturbed oncoming flow. |
+| **Trailing Edge Angle** | $\theta_{TE}$ | The angular coordinate of the point on the original circle that maps to the trailing edge of the airfoil (where $\zeta = c$). |
+| **Angle of Attack** | $\alpha$ | The angle between the free-stream velocity vector and the chord line. |
+
 
 So, the derivation is clean, and this specific complex potential is perfectly designed to yield the standard surface velocity distribution!
 
