@@ -1563,13 +1563,13 @@ $$
 For a shifted circle (with center at \(x_0, y_0)\) generating a camber angle $\beta$:
 
 $$
-\Gamma = 4\pi R \, U_\infty \sin(\theta_{TE} - \alpha)
+\Gamma = 4\pi R U_\infty \sin(\theta_{TE} - \alpha)
 $$
 
 or equivalently, defining $\theta_{TE} = -\beta$ (for upward camber):
 
 $$
-\Gamma = -4\pi R \, U_\infty \sin(\alpha + \beta)
+\Gamma = -4\pi R U_\infty \sin(\alpha + \beta)
 $$
 
 **What it does:** This equation resolves the infinite ambiguity of circulation in potential theory. Instead of an arbitrary vortex strength, geometry ($\beta$) and angle of attack ($\alpha$) uniquely dictate $\Gamma$ to enforce zero velocity at the sharp edge. One condition fixes everything.
