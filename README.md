@@ -1542,7 +1542,7 @@ $$
 z = \zeta + \frac{c^2}{\zeta}
 $$
 
-**Meaning:** It maps a simple circle in the $\zeta$-plane into a sharp-edged airfoil in the $z$-plane. The entire infinite family of airfoil shapes (thickness, camber) is controlled solely by the position of the circle's center. One equation, infinite shapes.
+**What it does:** It maps a simple circle in the $\zeta$-plane into a sharp-edged airfoil in the $z$-plane. The entire infinite family of airfoil shapes (thickness, camber) is controlled solely by the position of the circle's center. One equation, infinite shapes.
 
 ---
 
@@ -1553,7 +1553,7 @@ $$
 w(\zeta) = U_\infty \left( \zeta e^{-i\alpha} + \frac{R^2 e^{i\alpha}}{\zeta} \right) - \frac{i\Gamma}{2\pi} \ln \zeta
 $$
 
-**Meaning:** This single complex equation contains the entire inviscid flow field. Take its real part to get the velocity potential, or its imaginary part to get the streamlines. It's the Swiss Army knife of potential flow.
+**What it does:** This single complex equation contains the entire inviscid flow field. Take its real part to get the velocity potential, or its imaginary part to get the streamlines. It's the Swiss Army knife of potential flow.
 
 ---
 
@@ -1572,7 +1572,7 @@ $$
 \Gamma = -4\pi R \, U_\infty \sin(\alpha + \beta)
 $$
 
-**Meaning:** This equation resolves the infinite ambiguity of circulation in potential theory. Instead of an arbitrary vortex strength, geometry ($\beta$) and angle of attack ($\alpha$) uniquely dictate $\Gamma$ to enforce zero velocity at the sharp edge. One condition fixes everything.
+**What it does:** This equation resolves the infinite ambiguity of circulation in potential theory. Instead of an arbitrary vortex strength, geometry ($\beta$) and angle of attack ($\alpha$) uniquely dictate $\Gamma$ to enforce zero velocity at the sharp edge. One condition fixes everything.
 
 ---
 
@@ -1585,7 +1585,7 @@ $$
 v_\theta(\theta) = -2 U_\infty \left[ \sin(\theta - \alpha) + \sin(\theta_{TE} - \alpha) \right]
 $$
 
-**Meaning:** Notice how the circulation term ($\Gamma / 2\pi R$) is completely replaced by the geometry term $2 U_\infty \sin(\theta_{TE} - \alpha)$. The velocity distribution depends solely on two angles: the point on the cylinder ($\theta$) and the trailing edge location ($\theta_{TE}$). No more constants like $\Gamma$ cluttering the equation.
+**What it does:** Notice how the circulation term ($\Gamma / 2\pi R$) is completely replaced by the geometry term $2 U_\infty \sin(\theta_{TE} - \alpha)$. The velocity distribution depends solely on two angles: the point on the cylinder ($\theta$) and the trailing edge location ($\theta_{TE}$). No more constants like $\Gamma$ cluttering the equation.
 
 ---
 
@@ -1598,7 +1598,7 @@ $$
 |v_{\text{top}}| - |v_{\text{bottom}}| = 4 U_\infty \sin(\alpha + \beta)
 $$
 
-**Meaning:** It is shockingly simple. The velocity difference is purely a function of the effective angle of attack ($\alpha + \beta$). If the effective angle is zero, the speeds are equal (no lift). If it's positive, the top is faster by exactly $4 U_\infty \sin(\alpha + \beta)$. This directly connects geometry to the physics of Bernoulli.
+**What it does:** It is shockingly simple. The velocity difference is purely a function of the effective angle of attack ($\alpha + \beta$). If the effective angle is zero, the speeds are equal (no lift). If it's positive, the top is faster by exactly $4 U_\infty \sin(\alpha + \beta)$. This directly connects geometry to the physics of Bernoulli.
 
 ---
 
@@ -1621,4 +1621,4 @@ $$
 L = -4\pi \rho_\infty U_\infty^2 R \sin(\alpha + \beta)
 $$
 
-**Meaning:** This single line bypasses all the messy surface pressure integrations. It states that lift is entirely determined by the circulation fixed at the trailing edge. No viscosity, no pressure coefficients—just density, velocity, geometry, and angle of attack. This is one of the most celebrated equations in classical aerodynamics.
+**What it does:** This single line bypasses all the messy surface pressure integrations. It states that lift is entirely determined by the circulation fixed at the trailing edge. No viscosity, no pressure coefficients—just density, velocity, geometry, and angle of attack. This is one of the most celebrated equations in classical aerodynamics.
