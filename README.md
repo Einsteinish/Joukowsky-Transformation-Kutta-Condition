@@ -1003,10 +1003,10 @@ $$
 - The term $-2U_\infty \sin(\theta - \alpha)$ is the contribution from the freestream flow as it flows around the cylinder at angle of attack.
 - The term $+\dfrac{\Gamma}{2\pi a}$ is a constant shift in the tangential velocity caused by the circulation.
 
-This matches the classic result: if you set $\alpha = 0$ and $R = a$, you recover the familiar formula:
+This matches the classic result: 
 
 $$
-v_\theta = -2U_\infty \sin\theta + \frac{\Gamma_{\text{Kutta}}}{2\pi a}
+v_\theta = -2U_\infty \sin(\theta - \alpha)+ \frac{\Gamma_{\text{Kutta}}}{2\pi a}
 $$
 
 
