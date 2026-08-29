@@ -1140,6 +1140,7 @@ A negative circulation $\Gamma$ (the bound vortex) means that the bound vortex r
 
 ![v_theta_new_table](images/v_theta_table.png)   
 
+---
 
 ##### 4. Why It Generates Lift
 
@@ -1152,6 +1153,7 @@ $$
 L = \rho_\infty U_\infty \Gamma
 $$
 
+---
 
 ##### 💡 Bottom Line
 
