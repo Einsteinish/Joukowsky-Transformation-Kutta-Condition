@@ -1069,7 +1069,7 @@ A negative circulation $\Gamma$ (the bound vortex) means that the bound vortex r
 
 - **Top Surface ($0 < \theta < \pi$)**: On the top surface, the clockwise circulation adds a velocity component in the negative $\theta$ direction (toward the trailing edge). This combines with the uniform flow's own negative component, making the total velocity negative (and faster in magnitude).
 
-**Bottom Surface ($\pi < \theta < 2\pi$)**: On the bottom surface, the clockwise circulation adds a velocity component in the positive $\theta$ direction (toward the trailing edge). This partially cancels the negative offset, resulting in positive velocities over most of the bottom surface.
+- **Bottom Surface ($\pi < \theta < 2\pi$)**: On the bottom surface, the clockwise circulation adds a velocity component in the positive $\theta$ direction (toward the trailing edge). This partially cancels the negative offset, resulting in positive velocities over most of the bottom surface.
 
 
 ##### 4. Why It Generates Lift
