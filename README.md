@@ -8,6 +8,8 @@ For steady, incompressible, inviscid, irrotational 2-D flow around a cylinder wi
 
 Let the cylinder have radius $R$, the uniform flow at infinity have speed $U$, and the circulation around the cylinder be $\Gamma$.
 
+---
+
 ### 1.1 Complex Plane
 
 Use:
@@ -23,6 +25,8 @@ $$
 $$
 
 Take the uniform flow to be in the $+x$ direction.
+
+---
 
 ### 1.2 Complex Potential
 
@@ -44,6 +48,8 @@ The three terms have straightforward interpretations:
 - **$U_\infty \frac{a^2}{\zeta}$** is the doublet that creates the circular cylinder boundary, and
 - **$-\frac{i\Gamma}{2\pi} \log \zeta$** introduces circulation.
 
+---
+
 ### 1.3 Complex Velocity
 
 Using:
@@ -59,6 +65,8 @@ u - iv = U_\infty\left(1 - \frac{a^2}{\zeta^2}\right) - \frac{i\Gamma}{2\pi\zeta
 $$
 
 This is the complete velocity field in the complex plane.
+
+---
 
 ### 1.4 Velocity on the Cylinder
 
@@ -92,6 +100,8 @@ up to the sign convention chosen for positive circulation.
 
 > This is an important result: circulation simply shifts the cylinder's tangential velocity distribution.
 
+---
+
 ### 1.5 Pressure Distribution
 
 Using Bernoulli's equation:
@@ -118,6 +128,8 @@ $$
 C_p = 1 - \left(-2\sin\theta + \frac{\Gamma}{2\pi U_\infty a}\right)^2.
 $$
 
+---
+
 ### 1.6 Lift: The Kutta–Joukowski Result
 
 Integrating the pressure distribution around the cylinder gives zero drag in this ideal flow:
@@ -138,7 +150,7 @@ where $L'$ is lift per unit span.
 
 This is the **Kutta–Joukowski theorem** emerging directly from the complex-potential solution.
 
-
+---
 
 ### 1.7 A Useful Way to Visualize the Solution
 
@@ -156,6 +168,8 @@ and each term has a physical role:
 
 
 The particularly elegant feature is that the cylinder boundary remains a streamline even after circulation is added, because the radial velocity remains zero at $r = R$.
+
+---
 
 
 ### 1.8 Flow Past a Cylinder at Angle of Attack
@@ -180,6 +194,8 @@ where:
 - $a$ is the cylinder radius,
 - $\alpha$ is the angle between the free stream and the $+x$-axis,
 - $\Gamma$ is the circulation.
+
+---
 
 #### Why do the two terms get opposite rotations?
 
@@ -217,6 +233,8 @@ $$
 
 on the cylinder surface, satisfying the impermeability condition.
 
+---
+
 #### Velocity field
 
 Differentiating gives
@@ -249,6 +267,8 @@ for the circulation sign convention we're using.
 
 This is probably the most useful form for our derivation because it shows that introducing the attack angle simply shifts the angular dependence from $\theta$ to $\theta - \alpha$. 
 
+---
+
 
 ### 1.9 Appendix I - How do we get: $\frac{dW}{d\zeta} = u - iv$
 
@@ -267,6 +287,8 @@ The result
 $$ \frac{dW}{d\zeta} = u - iv $$
 
 comes directly from the Cauchy–Riemann equations.
+
+---
 
 #### 1.9.1 Differentiate $W$
 
@@ -287,6 +309,8 @@ because $W$ is analytic.
 Therefore,
 
 $$ \frac{dW}{d\zeta} = \frac{\partial}{\partial x}(\phi + i\psi) = \phi_x + i\psi_x. $$
+
+---
 
 #### 1.9.2 Use the velocity-potential definition
 
@@ -318,6 +342,8 @@ Hence
 
 $$ \frac{dW}{d\zeta} = u - iv. $$
 
+---
+
 #### 1.9.3 Why the minus sign?
 
 The minus sign in $u - iv$ comes from the Cauchy–Riemann relation
@@ -333,6 +359,8 @@ So the complex velocity is conventionally represented as
 $$ u - iv $$
 
 rather than $u + iv$.
+
+---
 
 
 ### 1.10 Appendix II - Do we have the value for the circulation, $\Gamma$?
@@ -357,6 +385,7 @@ $$
 [\Gamma] = \text{m}^2/\text{s}.
 $$
 
+---
 
 #### 1.10.1 Where could $\Gamma$ come from?
 
@@ -374,10 +403,11 @@ $$
 
 with the sign depending on the convention for positive rotation.
 
+
 ##### C. A boundary condition determines $\Gamma$
 In some aerodynamic problems, an additional condition such as a **Kutta condition** determines the circulation. This is what happens for flow around an airfoil. For a perfectly circular cylinder, however, there is no sharp trailing edge, so the Kutta condition does not uniquely select $\Gamma$.
 
-
+---
 
 #### 1.10.2 For our cylinder problem
 
@@ -403,13 +433,17 @@ $$
 
 > This is actually quite elegant: we don't need to know the numerical value of $\Gamma$ to demonstrate the Kutta–Joukowski result.
 
-
+---
 
 ### 1.11 Appendix III - How do we get $\Gamma = 2\pi a^2 \Omega$
+
+---
 
 #### 1.11.1 Circulation for a Rotating Cylinder
 
 The cleanest way to understand $\Gamma = 2\pi a^2 \Omega$ is to start from the definition of circulation and the rotational speed of the cylinder.
+
+---
 
 ##### A. Rotating cylinder
 
@@ -422,6 +456,8 @@ V_\theta = a\Omega.
 $$
 
 This is simply the familiar relation $v = r\Omega$ evaluated at $r = a$.
+
+---
 
 ##### B. Calculate the circulation
 
@@ -475,6 +511,8 @@ $$
 \Gamma = 2\pi a^2 \Omega.
 $$
 
+---
+
 ##### C. Important caveat
 
 For our inviscid, irrotational flow model, we shouldn't interpret this as saying that the entire surrounding fluid is rotating like a solid body.
@@ -517,6 +555,8 @@ $$
 \frac{\Gamma}{2\pi a} = a\Omega \implies \Gamma = 2\pi a^2 \Omega.
 $$
 
+---
+
 #### 1.11.2 One important qualification
 
 I would not present $\Gamma = 2\pi a^2 \Omega$ as a universal law for a real rotating cylinder. A real fluid has viscosity and a boundary layer, and the actual circulation generated by a spinning cylinder depends on the flow conditions.
@@ -528,6 +568,8 @@ For the idealized potential-flow model, however, this is a useful way to connect
 &nbsp;
 &nbsp;
 
+---
+
 ## 2. Joukowsky Transformation
 
 This chapter explains the Joukowsky transformation and flow past a cylinder under the counterclockwise circulation convention.
@@ -537,6 +579,8 @@ By Krishnavedala - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index
 
 &nbsp;
 &nbsp;
+
+---
 
 ### 2.1 Complex Potential with Counterclockwise Circulation
 
@@ -551,6 +595,8 @@ Notice the minus sign before the logarithmic term:
 - **Minus sign ($-i\Gamma$):** Enforces ### 2.1 Complex Potential with counterclockwise Circulation circulation for $\Gamma > 0$.
 - **Velocity effect:** A clockwise vortex (binding vortex) adds velocity to the upper surface of the cylinder (where the freestream flow goes left‑to‑right) and reduces velocity on the lower surface.
 - **Bernoulli's Principle:** Higher velocity on top yields lower static pressure; lower velocity on the bottom yields higher static pressure.
+
+---
 
 ### 2.2 The Kutta‑Joukowsky Theorem and Upward Lift
 
@@ -567,6 +613,8 @@ Where:
 - $V_\infty$ = Freestream velocity
 - $\Gamma$ = Counterclockwise circulation ($\Gamma < 0 \implies \text{Upward Lift}$)
 
+---
+
 ### 2.3 Mapping the Cylinder to an Airfoil (Joukowsky Mapping)
 
 The Joukowsky transformation maps the complex $\zeta$-plane (where the cylinder flow is solved) to the physical $z$-plane (where the airfoil lives) using the conformal function:
@@ -582,7 +630,9 @@ To obtain a realistic airfoil in the $z$-plane:
   - Shift along the **positive imaginary axis** → adds camber (curvature) to the airfoil.
 - **Trailing Edge Mapping:** The circle passes through the critical point $\zeta = c$, which maps directly to the sharp trailing edge of the airfoil in the $z$-plane.
 - **Scale Parameter:** $c$.
-   
+
+---
+  
 #### 2.3.1 Joukowsky Mapping Code  
 
 ```python
@@ -671,7 +721,7 @@ plt.show()
 
 ![Joukowsky mapping_1](images/Joukowsky_mapping_1.png)  
 
-
+---
 
 #### 2.3.2 The current parameter set
 
@@ -692,7 +742,7 @@ $$
 
 This means the circle is shifted **left by $0.2$** and **up by $0.1$** relative to the origin, while still forced to pass through $\zeta = 1$ (the trailing‑edge point).
 
-
+---
 
 #### 2.3.3 What Each Parameter Does to the Airfoil in the $z$-Plane
 
@@ -704,6 +754,7 @@ This means the circle is shifted **left by $0.2$** and **up by $0.1$** relative 
 - With $\chi_0 = -0.2$, you get a moderately thick airfoil (roughly 10-12% thickness‑to‑chord ratio).  
 - If $\chi_0$ were $0$ (center at origin), the circle would be the unit circle and map to a flat plate (zero thickness).
 
+---
 
 ##### B. $\eta_0 = 0.1$ (Vertical shift up) → Controls **Camber** (curvature)
 
@@ -713,6 +764,7 @@ This means the circle is shifted **left by $0.2$** and **up by $0.1$** relative 
 - This positive camber generates lift even at zero geometric angle of attack (typical of real aircraft wings).  
 - If $\eta_0 = 0$, the airfoil would be perfectly symmetric (no camber), and the upper/lower surfaces would be mirror images.
 
+---
 
 ##### C. Combined Effect of $\chi_0$ and $\eta_0$
 
@@ -726,6 +778,7 @@ Together, these parameters produce a cambered, moderately thick airfoil with the
 | **Max thickness** | Occurs around 30-40% of the chord, typical for subsonic wings. |
 | **Chord line** | Runs from trailing edge $z = 2$ to the leading edge (around $z \approx -0.4$ to $-0.5$ on the real axis). |
 
+---
 
 ##### D. Physical / Aerodynamic Meaning
 
@@ -733,6 +786,7 @@ Together, these parameters produce a cambered, moderately thick airfoil with the
 - The sharp trailing edge satisfies the **Kutta condition** automatically (which is why Joukowski airfoils are so useful in potential flow theory).  
 - The asymmetry (camber) also means the pressure distribution is unbalanced, favouring higher velocities over the top surface.
 
+---
 
 #### 2.3.4 Try Changing the Parameters to See the Effects
 
@@ -744,7 +798,8 @@ Together, these parameters produce a cambered, moderately thick airfoil with the
 
 - Set $\eta_0 = 0$ while keeping $\chi_0 = -0.2$ → a symmetric, non‑lifting airfoil (still has thickness but zero camber).  
 ![Joukowsky mapping_4](images/Joukowsky_mapping_4.png)  
-  
+
+---  
 
 ### 2.4 Fixing Circulation via the Kutta Condition
 
@@ -766,10 +821,13 @@ When this specific clockwise circulation $\Gamma$ is applied:
 - The potential flow solution becomes unique.
 - The calculated lift matches real‑world experimental data remarkably well for attached flows.
 
+---
 
 #### 2.4.1 Circulation for Joukowski Airfoil: Derivation of $\Gamma = - 4\pi a U_\infty \sin(\alpha + \beta)$
 
 This section explains the derivation of the circulation $\Gamma$ required to satisfy the Kutta condition for a Joukowski airfoil. The result is fundamental in potential flow theory and shows how camber and angle of attack generate lift.
+
+---
 
 ##### A. Surface Velocity on the Cylinder
 
@@ -785,6 +843,7 @@ $$
 
 Check Appendix 2.4.2: Derivation of the Surface Velocity $V_\theta(\theta)$.
 
+---
 
 ##### B. Finding the Stagnation Points
 
@@ -806,7 +865,7 @@ $$
 \Gamma = - 4 \pi a U_\infty \sin(\alpha - \theta_{\text{stag}})
 $$
 
-
+---
 
 ##### C. Locating the Cylinder Center Shift $(\mu_x, \mu_y)$
 
@@ -826,7 +885,7 @@ $$
 
 Hence, relative to the cylinder’s center, the critical point $\zeta = c$ lies at an angle $-\beta$ (below the horizontal line through the center).
 
-
+---
 
 ##### D. Applying the Kutta Condition
 
@@ -838,7 +897,7 @@ $$
 \theta_{\text{stag}} = -\beta
 $$
 
-
+---
 
 ##### E. Substituting $\theta_{\text{stag}} = -\beta$
 
@@ -858,6 +917,8 @@ $$
 
 ![camber angle](images/camber_angle.png) 
 
+---
+
 ##### F. Summary
 
 - $\alpha$ = angle of attack (freestream direction relative to the chord line).
@@ -872,6 +933,7 @@ $$
 
 which generates positive lift.  
 
+---
 
 #### 2.4.2 Appendix - How to get the Surface Velocity (Method I), $V_\theta(\theta)$ (see 2.4.1.A) 
 
@@ -885,7 +947,7 @@ $$
 
 Here is the step‑by‑step derivation to extract $v_\theta$ on the cylinder boundary $\zeta = a e^{i\theta}$.
 
- 
+---
 
 ###### Step 1: Differentiate to get the complex velocity
 
@@ -907,7 +969,7 @@ $$
 \frac{dW}{d\zeta} = U_\infty e^{-i\alpha} - U_\infty \frac{a^2 e^{i\alpha}}{\zeta^2} - \frac{i\Gamma}{2\pi \zeta}
 $$
 
- 
+--- 
 
 ###### Step 2: Evaluate on the cylinder surface
 
@@ -935,7 +997,7 @@ $$
 \frac{dW}{d\zeta} = U_\infty e^{-i\alpha} - U_\infty e^{i(\alpha - 2\theta)} - \frac{i\Gamma}{2\pi a} e^{-i\theta}
 $$
 
- 
+---
 
 ###### Step 3: Convert to polar velocity components
 
@@ -981,7 +1043,7 @@ $$
 v_r - i v_\theta = i \left( 2U_\infty \sin(\theta - \alpha) - \frac{\Gamma}{2\pi a} \right)
 $$
 
- 
+--- 
 
 ###### Step 4: Extract $v_r$ and $v_\theta$
 
@@ -996,7 +1058,7 @@ $$
 \boxed{v_\theta = -2U_\infty \sin(\theta - \alpha) + \frac{\Gamma}{2\pi a}}
 $$
 
- 
+---
 
 ##### Physical Interpretation of $v_\theta$
 
@@ -1038,11 +1100,13 @@ So, the derivation is clean, and this specific complex potential is perfectly de
 
 [Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/v_theta_new.py)  
 
-
+---
 
 #### 2.4.3 Appendix - The Plot Interpretation of the $v_\theta$ Plot ($\alpha = 0^\circ$)
 
 The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the cylinder surface at each angle.
+
+---
 
 ##### 1. The Shape of the Curve
 
@@ -1054,12 +1118,15 @@ The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the 
 
 - **With circulation ($\Gamma > 0$):** The entire sine wave is shifted upward by a constant $+\Gamma/(2\pi a)$.
 
+---
+
 ##### 2. What the Shift Does Physically
 
 - **Breaks the symmetry**: The top and bottom speeds are no longer equal. One side becomes faster, the other slower.
 - **Moves the stagnation points**: The front and rear stagnation points shift away from $\pi$ and $0$(moving downwards toward the lower surface). This tilts the flow pattern.
 - **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
 
+---
 
 ##### 3. Physical Interpretation of Negative $v_\theta$ and Negative $\Gamma$
 
@@ -1090,6 +1157,7 @@ $$
 
 > The curve is literally the **mathematical footprint** of lift. The vertical shift of the sine wave represents the circulation that makes the flow asymmetric, which in turn produces the pressure imbalance that lifts the cylinder (or airfoil).  
   
+---
   
 #### 2.4.4 Pressure Coefficient $C_p$
 
@@ -1098,6 +1166,8 @@ $$
 [View the full Python script here →](Python/cp_alpha00_beta52.py)  
 
 [Download the raw script](https://raw.githubusercontent.com/Einsteinish/Joukowsky-Transformation-Kutta-Condition/main/Python/cp_alpha00_beta52.py)  
+
+---
 
 ##### 2.4.4.1. Reading the Flow Along the Chord
 
@@ -1154,7 +1224,7 @@ In our plot, you should see that the colours (and the vertical positions) of the
 - The circulation $\Gamma$ is correctly chosen,
 - The flow exits without a discontinuity.
 
- 
+--- 
 
 ##### 2.4.4.2 🎨 What Does the Colour Tell You at a Glance?
 
@@ -1180,6 +1250,8 @@ The colour map makes it extremely easy to spot the location of the suction peak 
 3. The **location of the suction peak** tells you about the loading distribution.  
    A peak that is very far forward (close to the nose) indicates a highly cambered or high‑lift configuration.
 
+---
+
 ##### 2.4.4.4 🛩️ The Current Case
 
 - $\alpha = 0^\circ$, $\beta \approx 5.2^\circ$ → effective angle of attack $= 5.2^\circ$.
@@ -1189,11 +1261,13 @@ The colour map makes it extremely easy to spot the location of the suction peak 
 
 All signs of a **well‑behaved, lifting airfoil**.
 
+---
 
 #### 2.4.5 Appendix - How to get the Surface Velocity (Method II)
 Derivation of Tangential Velocity $v_\theta$ and the Kutta Condition in the Joukowski Transformation.
 You will see a step-by-step derivation of the tangential velocity distribution on the surface of a cylinder under potential flow with circulation. It demonstrates the exact mathematical step where the strength of the bound vortex $\Gamma$ is uniquely fixed by the **Kutta condition**.
 
+---
 
 ##### 2.4.5.1 Starting Point: Potential Flow Around a Cylinder
 
@@ -1204,6 +1278,8 @@ For a cylinder of radius $a$, subject to a uniform flow $U_\infty$ (at an angle 
 $$
 W(\zeta) = U_\infty\left(\zeta e^{-i\alpha} + \frac{a^2 e^{i\alpha}}{\zeta}\right) - \frac{i\Gamma}{2\pi}\ln \zeta
 $$
+
+---
 
 ##### A. Stream Function $psi(r, \theta)$
 
@@ -1247,6 +1323,7 @@ $$
 \boxed{\psi(r,\theta) = U_\infty\left(r - \frac{a^2}{r}\right)\sin(\theta-\alpha) - \frac{\Gamma}{2\pi}\ln r}
 $$
 
+---
 
 ##### 2.4.5.2  Velocity Components in Polar Coordinates
 
@@ -1262,7 +1339,7 @@ $$
 v_\theta = -\left[U_\infty\left(1+\frac{a^2}{r^2}\right)\sin(\theta-\alpha)\right] + \frac{\Gamma}{2\pi r}
 $$
 
- 
+---
 
 ##### 2.4.5.3 Evaluation at the Cylinder Surface ($r = a$)
 
@@ -1282,7 +1359,7 @@ $$
 | $-2U_\infty\sin(\theta-\alpha)$ | Uniform flow | Symmetric surface velocity distribution with no circulation ($\Gamma = 0$). |
 | $\frac{\Gamma}{2\pi a}$ | Circulation | Rotational component added uniformly across the entire surface. |
 
- 
+--- 
 
 ##### 2.4.5.4 Applying the Kutta Condition: Determining the Unique Value of \( \Gamma \)
 
@@ -1308,12 +1385,13 @@ $$
 \boxed{\Gamma = -4\pi a U_\infty \sin\alpha}
 $$
 
- 
+--- 
 
 ##### 2.4.5.5 Quantitative Velocity Distribution ($v_\theta$) on a Cylinder Surface with Circulation
 
 This section extends the previous derivation of the Kutta condition by explicitly calculating the tangential velocities on the top and bottom surfaces of a cylinder. It provides the exact mathematical proof that the bound vortex accelerates the flow on the upper surface while decelerating it on the lower surface.
 
+---
 
 **A. Setting the Trailing Edge and Substituting the Circulation**
 
@@ -1383,13 +1461,15 @@ $$
 |v_{\theta, \text{top}}| = 2U_\infty(\cos\alpha + \sin\alpha) > |v_{\theta, \text{bottom}}| = 2U_\infty(\cos\alpha - \sin\alpha)
 $$
 
+---
+
 **E. Key Takeaways**
 
 - **Velocity Difference**: The top surface is exactly **$4U_\infty \sin\alpha$** faster than the bottom surface.
 - **Bound Vortex Effect**: This numerically confirms the physical description that *the bound vortex accelerates the upper surface flow and decelerates the lower surface flow*.
 - **Lift Generation**: Since the velocity is higher on the top, Bernoulli's principle dictates a lower pressure there, resulting in a net upward pressure difference—which is the source of lift.
 
-
+---
 
 **F. Validation Check at Zero Angle of Attack ($\alpha = 0$)**
 
@@ -1411,11 +1491,13 @@ $$
 \boxed{|v_{\theta, \text{top}}| = |v_{\theta, \text{bottom}}| = 2U_\infty}
 $$
 
+---
+
 **G. Agreement with Classical Theory**
 
 This result perfectly matches the well-known classical solution for potential flow around a non-rotating cylinder, where the maximum surface speed is exactly $2U_\infty$. The symmetry is fully restored, confirming the consistency of our derived equations.
 
-
+---
 
 **H. Connection to Pressure Difference (Bernoulli's Equation)**
 
