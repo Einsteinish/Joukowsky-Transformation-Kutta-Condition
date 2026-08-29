@@ -1560,7 +1560,7 @@ $$
 ### 4.3 The Kutta Condition (The Decider)
 > *"Removing the infinite by demanding smoothness at the trailing edge."*
 
-For a shifted circle (with center at $(x_0, y_0)$) generating a camber angle $\beta$:
+For a shifted circle (with center at \(x_0, y_0)\) generating a camber angle $\beta$:
 
 $$
 \Gamma = 4\pi R \, U_\infty \sin(\theta_{TE} - \alpha)
