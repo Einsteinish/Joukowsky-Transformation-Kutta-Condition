@@ -1060,7 +1060,23 @@ The plot of $v_\theta$ versus $\theta$ shows how fast the fluid moves along the 
 - **Moves the stagnation points**: The front and rear stagnation points shift away from $\pi$ and $0$(moving downwards toward the lower surface). This tilts the flow pattern.
 - **Represents the "spin" effect**: Like a rotating cylinder or a cambered airfoil, the circulation drags fluid around the surface, adding a uniform velocity boost everywhere.
 
-##### 3. Why It Generates Lift
+
+##### 3. Physical Interpretation of Negative $v_\theta$ and Negative $\Gamma$
+
+In polar coordinates, positive $\theta$ is counterclockwise. Therefore, a negative $v_\theta$ indicates that the flow is moving in the **clockwise direction** (i.e., from the front stagnation point toward the top, and then toward the rear).
+
+A negative circulation $\Gamma$ (the bound vortex) means that the bound vortex rotates clockwise. This affects the top and bottom surfaces differently.
+
+**Top Surface ($0 < \theta < \pi$)**
+
+On the top surface, the clockwise circulation adds a velocity component in the negative $\theta$ direction (toward the trailing edge). This combines with the uniform flow's own negative component, making the total velocity negative (and faster in magnitude).
+
+**Bottom Surface ($\pi < \theta < 2\pi$)**
+
+On the bottom surface, the clockwise circulation adds a velocity component in the positive $\theta$ direction (toward the trailing edge). This partially cancels the negative offset, resulting in positive velocities over most of the bottom surface.
+
+
+##### 4. Why It Generates Lift
 
 - Faster flow on one surface → **lower pressure** (Bernoulli's principle).
 - Slower flow on the opposite surface → **higher pressure**.
