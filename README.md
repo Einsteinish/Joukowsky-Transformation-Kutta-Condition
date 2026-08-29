@@ -803,7 +803,7 @@ $$
 Using $\sin(-x) = -\sin(x)$, we get:
 
 $$
-\Gamma = 4 \pi a U_\infty \sin(\alpha - \theta_{\text{stag}})
+\Gamma = - 4 \pi a U_\infty \sin(\alpha - \theta_{\text{stag}})
 $$
 
 
@@ -845,13 +845,13 @@ $$
 Plug this into the circulation formula from Step 2:
 
 $$
-\Gamma = 4 \pi a U_\infty \sin\Big(\alpha - (-\beta)\Big)
+\Gamma = - 4 \pi a U_\infty \sin\Big(\alpha - (-\beta)\Big)
 $$
 
 Thus:
 
 $$
-\Gamma = 4 \pi a U_\infty \sin(\alpha + \beta)
+\Gamma = - 4 \pi a U_\infty \sin(\alpha + \beta)
 $$
 
 
@@ -867,7 +867,7 @@ $$
 **Key insight**: Even at zero geometric angle of attack ($\alpha = 0$), a cambered airfoil ($\beta > 0$) still produces a non‑zero circulation  
 
 $$ 
-\Gamma = 4\pi a U_\infty \sin\beta  
+\Gamma = - 4\pi a U_\infty \sin\beta  
 $$ 
 
 which generates positive lift.  
